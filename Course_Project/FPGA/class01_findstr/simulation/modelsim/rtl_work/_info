@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/simulation/modelsim
+vfindstr
+Z1 !s110 1541514806
+!i10b 1
+!s100 b707Tl2AQ`QGlUQTcaff93
+Ij8hA`H3Mmn5_2YV0;ld<_1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1541514776
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle/findstr.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle/findstr.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1541514806.000000
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle/findstr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle/findstr.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle
+Z6 tCvgOpt 0
+vfindstr_tb
+R1
+!i10b 1
+!s100 EUQ9HD<=icFzGT3@SiONZ1
+IziE8?7QhWziWIjN^kF3Uc0
+R2
+R0
+w1541514777
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench/findstr_tb.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench/findstr_tb.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench/findstr_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench/findstr_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench
+R6

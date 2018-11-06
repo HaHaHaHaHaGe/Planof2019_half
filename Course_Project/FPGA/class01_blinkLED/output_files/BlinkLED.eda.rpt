@@ -1,0 +1,107 @@
+EDA Netlist Writer report for BlinkLED
+Tue Nov 06 20:06:16 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. Simulation Settings
+  4. Simulation Generated Files
+  5. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                        ;
++---------------------------+---------------------------------------+
+; EDA Netlist Writer Status ; Successful - Tue Nov 06 20:06:16 2018 ;
+; Revision Name             ; BlinkLED                              ;
+; Top-level Entity Name     ; Count                                 ;
+; Family                    ; Cyclone IV E                          ;
+; Simulation Files Creation ; Successful                            ;
++---------------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                           ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Option                                                                                            ; Setting                   ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
+; Generate functional simulation netlist                                                            ; Off                       ;
+; Time scale                                                                                        ; 1 ps                      ;
+; Truncate long hierarchy paths                                                                     ; Off                       ;
+; Map illegal HDL characters                                                                        ; Off                       ;
+; Flatten buses into individual nodes                                                               ; Off                       ;
+; Maintain hierarchy                                                                                ; Off                       ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
+; Enable glitch filtering                                                                           ; Off                       ;
+; Do not write top level VHDL entity                                                                ; Off                       ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
+; Architecture name in VHDL output netlist                                                          ; structure                 ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                ;
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                           ;
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/BlinkLED_8_1200mv_85c_slow.vo     ;
+; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/BlinkLED_8_1200mv_0c_slow.vo      ;
+; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/BlinkLED_min_1200mv_0c_fast.vo    ;
+; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/BlinkLED.vo                       ;
+; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/BlinkLED_8_1200mv_85c_v_slow.sdo  ;
+; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/BlinkLED_8_1200mv_0c_v_slow.sdo   ;
+; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/BlinkLED_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/BlinkLED_v.sdo                    ;
++-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Tue Nov 06 20:06:15 2018
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off BlinkLED -c BlinkLED
+Info (204019): Generated file BlinkLED_8_1200mv_85c_slow.vo in folder "C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BlinkLED_8_1200mv_0c_slow.vo in folder "C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BlinkLED_min_1200mv_0c_fast.vo in folder "C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BlinkLED.vo in folder "C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BlinkLED_8_1200mv_85c_v_slow.sdo in folder "C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BlinkLED_8_1200mv_0c_v_slow.sdo in folder "C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BlinkLED_min_1200mv_0c_v_fast.sdo in folder "C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file BlinkLED_v.sdo in folder "C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4659 megabytes
+    Info: Processing ended: Tue Nov 06 20:06:16 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

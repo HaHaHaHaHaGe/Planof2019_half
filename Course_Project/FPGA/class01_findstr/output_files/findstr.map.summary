@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Nov 06 22:33:06 2018
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : findstr
+Top-level Entity Name : findstr
+Family : Cyclone IV E
+Total logic elements : 31
+    Total combinational functions : 31
+    Dedicated logic registers : 10
+Total registers : 10
+Total pins : 16
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

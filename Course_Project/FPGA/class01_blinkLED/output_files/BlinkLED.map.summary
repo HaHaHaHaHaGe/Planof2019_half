@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Nov 06 20:06:05 2018
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : BlinkLED
+Top-level Entity Name : Count
+Family : Cyclone IV E
+Total logic elements : 51
+    Total combinational functions : 51
+    Dedicated logic registers : 33
+Total registers : 33
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

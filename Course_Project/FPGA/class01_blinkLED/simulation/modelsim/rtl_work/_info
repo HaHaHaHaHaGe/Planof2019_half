@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/simulation/modelsim
+vCount
+Z1 !s110 1541506052
+!i10b 1
+!s100 Y2ZhWKU``n@ZUo2kUgN`S3
+IRjJ`S0EWOoTCBOflj`]iE1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1541505955
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/moudle/Count.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/moudle/Count.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1541506052.000000
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/moudle/Count.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/moudle|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/moudle/Count.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/moudle
+Z6 tCvgOpt 0
+n@count
+vCount_tb
+R1
+!i10b 1
+!s100 =A:UJ6BF5YXCfge`0ngT23
+IfLTZ0XnbmDRDCR_>1=4OD2
+R2
+R0
+w1541504602
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/testbench/Count_tb.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/testbench/Count_tb.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/testbench/Count_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/testbench|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/testbench/Count_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_blinkLED/testbench
+R6
+n@count_tb
