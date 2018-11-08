@@ -1,5 +1,5 @@
 Flow report for BlinkLED
-Tue Nov 06 20:06:16 2018
+Thu Nov 08 09:22:21 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 06 20:06:16 2018       ;
+; Flow Status                        ; Successful - Thu Nov 08 09:22:21 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; BlinkLED                                    ;
 ; Top-level Entity Name              ; Count                                       ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10F17C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 51 / 10,320 ( < 1 % )                       ;
-;     Total combinational functions  ; 51 / 10,320 ( < 1 % )                       ;
+; Total logic elements               ; 57 / 10,320 ( < 1 % )                       ;
+;     Total combinational functions  ; 57 / 10,320 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 33 / 10,320 ( < 1 % )                       ;
 ; Total registers                    ; 33                                          ;
 ; Total pins                         ; 3 / 180 ( 2 % )                             ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/06/2018 20:05:57 ;
+; Start date & time ; 11/08/2018 09:22:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; BlinkLED            ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 1098641533198.154150595621020          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 1098641533198.154164012203628          ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Count_tb       ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Count_tb                               ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -105,10 +105,10 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4784 MB             ; 00:00:19                           ;
-; Fitter               ; 00:00:03     ; 1.0                     ; 5538 MB             ; 00:00:04                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 4690 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4769 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
+; Fitter               ; 00:00:03     ; 1.0                     ; 5536 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4690 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4771 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
 ; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:27                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 

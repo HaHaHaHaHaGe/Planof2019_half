@@ -1,5 +1,5 @@
 Analysis & Synthesis report for BlinkLED
-Tue Nov 06 20:06:05 2018
+Thu Nov 08 09:22:11 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -42,13 +42,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 06 20:06:05 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 08 09:22:11 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; BlinkLED                                    ;
 ; Top-level Entity Name              ; Count                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 51                                          ;
-;     Total combinational functions  ; 51                                          ;
+; Total logic elements               ; 57                                          ;
+;     Total combinational functions  ; 57                                          ;
 ;     Dedicated logic registers      ; 33                                          ;
 ; Total registers                    ; 33                                          ;
 ; Total pins                         ; 3                                           ;
@@ -177,16 +177,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 51        ;
+; Estimated Total logic elements              ; 57        ;
 ;                                             ;           ;
-; Total combinational functions               ; 51        ;
+; Total combinational functions               ; 57        ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 10        ;
 ;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 41        ;
+;     -- <=2 input functions                  ; 47        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 20        ;
+;     -- normal mode                          ; 26        ;
 ;     -- arithmetic mode                      ; 31        ;
 ;                                             ;           ;
 ; Total registers                             ; 33        ;
@@ -199,8 +199,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 33        ;
-; Total fan-out                               ; 224       ;
-; Average fan-out                             ; 2.49      ;
+; Total fan-out                               ; 236       ;
+; Average fan-out                             ; 2.46      ;
 +---------------------------------------------+-----------+
 
 
@@ -209,7 +209,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |Count                     ; 51 (51)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |Count              ; Count       ; work         ;
+; |Count                     ; 57 (57)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |Count              ; Count       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -237,16 +237,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; boundary_port         ; 3                           ;
 ; cycloneiii_ff         ; 33                          ;
 ;     CLR               ; 33                          ;
-; cycloneiii_lcell_comb ; 51                          ;
+; cycloneiii_lcell_comb ; 57                          ;
 ;     arith             ; 31                          ;
 ;         2 data inputs ; 31                          ;
-;     normal            ; 20                          ;
+;     normal            ; 26                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 9                           ;
+;         2 data inputs ; 15                          ;
 ;         4 data inputs ; 10                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 3.55                        ;
+; Max LUT depth         ; 4.50                        ;
+; Average LUT depth     ; 3.74                        ;
 +-----------------------+-----------------------------+
 
 
@@ -265,7 +265,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 06 20:05:56 2018
+    Info: Processing started: Thu Nov 08 09:22:02 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BlinkLED -c BlinkLED
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file moudle/count.v
@@ -276,14 +276,14 @@ Info (12127): Elaborating entity "Count" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 60 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 51 logic cells
+    Info (21061): Implemented 57 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4784 megabytes
-    Info: Processing ended: Tue Nov 06 20:06:05 2018
+    Info: Processing ended: Thu Nov 08 09:22:11 2018
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:19
 
 

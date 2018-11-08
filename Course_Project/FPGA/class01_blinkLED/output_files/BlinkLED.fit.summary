@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Nov 06 20:06:09 2018
+Fitter Status : Successful - Thu Nov 08 09:22:15 2018
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : BlinkLED
 Top-level Entity Name : Count
 Family : Cyclone IV E
 Device : EP4CE10F17C8
 Timing Models : Final
-Total logic elements : 51 / 10,320 ( < 1 % )
-    Total combinational functions : 51 / 10,320 ( < 1 % )
+Total logic elements : 57 / 10,320 ( < 1 % )
+    Total combinational functions : 57 / 10,320 ( < 1 % )
     Dedicated logic registers : 33 / 10,320 ( < 1 % )
 Total registers : 33
 Total pins : 3 / 180 ( 2 % )

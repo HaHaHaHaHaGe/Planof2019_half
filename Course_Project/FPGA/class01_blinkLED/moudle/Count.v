@@ -10,12 +10,12 @@ module Count(
 	
 	reg [31:0]cnt;
 	
-	always@(posedge clk,posedge clr)
-	if(clr) begin
+	always@(posedge clk,negedge clr)
+	if(!clr) begin
 		cnt <= 32'b0;
 		out <= 1'b0;
 	end
-	else if(cnt == 32'd50_000_000 / 1000) begin
+	else if(cnt == 32'd50_000_000) begin
 		out <= ~out;
 		cnt <= 32'b0;
 	end
