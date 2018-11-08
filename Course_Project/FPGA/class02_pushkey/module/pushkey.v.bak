@@ -1,0 +1,23 @@
+module pushkey(
+	clk,
+	key,
+	out
+);
+
+input clk,key;
+output out;
+
+reg [19:0]cnt;
+
+always@(posedge clk)
+if(!key) begin
+	cnt[19:18] <= 1'b1;
+end
+else if(cnt[19:18] == 1'b1)
+	cnt = cnt + 18'b1;
+else
+	cnt[19:0] <= 19'd0;
+	
+
+
+endmodule

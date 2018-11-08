@@ -1,5 +1,5 @@
 Flow report for findstr
-Tue Nov 06 22:33:17 2018
+Thu Nov 08 10:12:16 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 06 22:33:17 2018       ;
+; Flow Status                        ; Successful - Thu Nov 08 10:12:16 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; findstr                                     ;
 ; Top-level Entity Name              ; findstr                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10F17C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 31 / 10,320 ( < 1 % )                       ;
-;     Total combinational functions  ; 31 / 10,320 ( < 1 % )                       ;
+; Total logic elements               ; 32 / 10,320 ( < 1 % )                       ;
+;     Total combinational functions  ; 32 / 10,320 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 10 / 10,320 ( < 1 % )                       ;
 ; Total registers                    ; 10                                          ;
 ; Total pins                         ; 16 / 180 ( 9 % )                            ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/06/2018 22:32:58 ;
+; Start date & time ; 11/08/2018 10:11:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; findstr             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 1098641533198.154151477714572          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 1098641533198.154164311708456          ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; findstr_tb     ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; findstr_tb                             ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -102,11 +102,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4785 MB             ; 00:00:18                           ;
-; Fitter               ; 00:00:03     ; 1.0                     ; 5528 MB             ; 00:00:04                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 4689 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4780 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4657 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4784 MB             ; 00:00:18                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 5530 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4689 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4779 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
 ; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:26                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 

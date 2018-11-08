@@ -1,5 +1,5 @@
 Analysis & Synthesis report for findstr
-Tue Nov 06 22:33:06 2018
+Thu Nov 08 10:12:05 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -45,13 +45,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 06 22:33:06 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 08 10:12:05 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; findstr                                     ;
 ; Top-level Entity Name              ; findstr                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 31                                          ;
-;     Total combinational functions  ; 31                                          ;
+; Total logic elements               ; 32                                          ;
+;     Total combinational functions  ; 32                                          ;
 ;     Dedicated logic registers      ; 10                                          ;
 ; Total registers                    ; 10                                          ;
 ; Total pins                         ; 16                                          ;
@@ -174,36 +174,36 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 31       ;
-;                                             ;          ;
-; Total combinational functions               ; 31       ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 21       ;
-;     -- 3 input functions                    ; 6        ;
-;     -- <=2 input functions                  ; 4        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 31       ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 10       ;
-;     -- Dedicated logic registers            ; 10       ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 16       ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; dv~input ;
-; Maximum fan-out                             ; 10       ;
-; Total fan-out                               ; 160      ;
-; Average fan-out                             ; 2.19     ;
-+---------------------------------------------+----------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 32            ;
+;                                             ;               ;
+; Total combinational functions               ; 32            ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 21            ;
+;     -- 3 input functions                    ; 6             ;
+;     -- <=2 input functions                  ; 5             ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 32            ;
+;     -- arithmetic mode                      ; 0             ;
+;                                             ;               ;
+; Total registers                             ; 10            ;
+;     -- Dedicated logic registers            ; 10            ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 16            ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; data[3]~input ;
+; Maximum fan-out                             ; 10            ;
+; Total fan-out                               ; 162           ;
+; Average fan-out                             ; 2.19          ;
++---------------------------------------------+---------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,24 +211,24 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |findstr                   ; 31 (31)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |findstr            ; findstr     ; work         ;
+; |findstr                   ; 32 (32)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |findstr            ; findstr     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------+
-; State Machine - |findstr|state                                                    ;
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-; Name      ; state.101 ; state.100 ; state.011 ; state.010 ; state.001 ; state.000 ;
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-; state.000 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ;
-; state.001 ; 0         ; 0         ; 0         ; 0         ; 1         ; 1         ;
-; state.010 ; 0         ; 0         ; 0         ; 1         ; 0         ; 1         ;
-; state.011 ; 0         ; 0         ; 1         ; 0         ; 0         ; 1         ;
-; state.100 ; 0         ; 1         ; 0         ; 0         ; 0         ; 1         ;
-; state.101 ; 1         ; 0         ; 0         ; 0         ; 0         ; 1         ;
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
++-----------------------------------------------------------------------------------------------------------+
+; State Machine - |findstr|state                                                                            ;
++---------------+---------------+---------------+---------------+---------------+---------------+-----------+
+; Name          ; state.CHECK_M ; state.CHECK_O ; state.CHECK_C ; state.CHECK_L ; state.CHECK_E ; state.000 ;
++---------------+---------------+---------------+---------------+---------------+---------------+-----------+
+; state.000     ; 0             ; 0             ; 0             ; 0             ; 0             ; 0         ;
+; state.CHECK_E ; 0             ; 0             ; 0             ; 0             ; 1             ; 1         ;
+; state.CHECK_L ; 0             ; 0             ; 0             ; 1             ; 0             ; 1         ;
+; state.CHECK_C ; 0             ; 0             ; 1             ; 0             ; 0             ; 1         ;
+; state.CHECK_O ; 0             ; 1             ; 0             ; 0             ; 0             ; 1         ;
+; state.CHECK_M ; 1             ; 0             ; 0             ; 0             ; 0             ; 1         ;
++---------------+---------------+---------------+---------------+---------------+---------------+-----------+
 
 
 +------------------------------------------------------------+
@@ -236,9 +236,9 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
-; state~10                              ; Lost fanout        ;
-; state~11                              ; Lost fanout        ;
-; state~12                              ; Lost fanout        ;
+; state~4                               ; Lost fanout        ;
+; state~5                               ; Lost fanout        ;
+; state~6                               ; Lost fanout        ;
 ; Total Number of Removed Registers = 3 ;                    ;
 +---------------------------------------+--------------------+
 
@@ -263,7 +263,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 17:1               ; 2 bits    ; 22 LEs        ; 4 LEs                ; 18 LEs                 ; No         ; |findstr|Selector0         ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 6 LEs                ; 16 LEs                 ; No         ; |findstr|Selector0         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -275,15 +275,15 @@ Encoding Type:  One-Hot
 ; boundary_port         ; 16                          ;
 ; cycloneiii_ff         ; 10                          ;
 ;     CLR               ; 10                          ;
-; cycloneiii_lcell_comb ; 32                          ;
-;     normal            ; 32                          ;
+; cycloneiii_lcell_comb ; 33                          ;
+;     normal            ; 33                          ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 4                           ;
+;         2 data inputs ; 5                           ;
 ;         3 data inputs ; 6                           ;
 ;         4 data inputs ; 21                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.55                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.72                        ;
 +-----------------------+-----------------------------+
 
 
@@ -302,7 +302,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 06 22:32:57 2018
+    Info: Processing started: Thu Nov 08 10:11:57 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off findstr -c findstr
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -318,14 +318,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 47 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 48 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 31 logic cells
+    Info (21061): Implemented 32 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Tue Nov 06 22:33:06 2018
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4784 megabytes
+    Info: Processing ended: Thu Nov 08 10:12:05 2018
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

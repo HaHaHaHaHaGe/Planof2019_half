@@ -20,7 +20,7 @@ module findstr_tb;
 			.get_flag(get_flag)
 	);
 	
-	initial data_tmp = "amgnawuiWelWelcomcomerighwelcomhbhhflalWelcomilrbgfvWelcomlailulwblsirudwelcomguufujijlawWelcomiurg";
+	initial data_tmp = "WelcomWelcomWelcomWelcomWelcomWelcom";
 
 	initial begin
 	clk = 0;

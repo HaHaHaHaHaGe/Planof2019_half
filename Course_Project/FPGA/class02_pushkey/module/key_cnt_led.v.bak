@@ -1,0 +1,30 @@
+module key_cnt_led(
+	led1,
+	led2,
+	led3,
+	led4,
+	key,
+	clk,
+	rst
+);
+
+input wire key,clk,rst;
+output wire led1,led2,led3,led4;
+wire outkey;
+
+pushkey pushkey_01(
+	.clk(clk),
+	.key(key),
+	.out(outkey)
+);
+
+count_led count_led_01(
+	.led1(led1),
+	.led2(led2),
+	.led3(led3),
+	.led4(led4),
+	.clk(clk),
+	.rst(rst)
+);
+
+endmodule

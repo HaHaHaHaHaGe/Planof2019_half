@@ -1,0 +1,32 @@
+`timescale 1ns/1ns
+module pushkey_tb;
+
+reg clk,key;
+wire out;
+
+pushkey push(
+	.clk(clk),
+	.key(key),
+	.out(out)
+);
+
+
+initial begin
+clk = 0;
+key = 1;
+end
+
+
+always #10 clk = ~clk;
+
+initial begin
+#200;
+key = 0;
+#200;
+key = 1;
+#200;
+#200;
+end
+
+
+endmodule

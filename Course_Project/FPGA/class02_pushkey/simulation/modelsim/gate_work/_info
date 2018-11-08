@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/simulation/modelsim
+vhard_block
+Z1 !s110 1541668141
+!i10b 1
+!s100 5Ro6IGY`UTeW`:A^3A>ST3
+I_^?Lhf:T8iWV@iX@^ea3B1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1541667890
+Z4 8pushkey_8_1200mv_85c_slow.vo
+Z5 Fpushkey_8_1200mv_85c_slow.vo
+L0 1177
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1541668141.000000
+Z8 !s107 pushkey_8_1200mv_85c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|pushkey_8_1200mv_85c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vpushkey
+R1
+!i10b 1
+!s100 ]KWR]Tl>0Ybln4A4TcDaK2
+I>Y0=;3Dc[4NV[Mhb?NJWP1
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vpushkey_tb
+R1
+!i10b 1
+!s100 LBKXeG7=`O6n@X<6DLU5n3
+I2XhPIlRL6[ml7FjIB3kNC2
+R2
+R0
+w1541665912
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/testbench/pushkey_tb.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/testbench/pushkey_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/testbench/pushkey_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/testbench|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/testbench/pushkey_tb.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/testbench
+R12

@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/simulation/modelsim
 vfindstr
-Z1 !s110 1541514806
+Z1 !s110 1541643212
 !i10b 1
-!s100 b707Tl2AQ`QGlUQTcaff93
-Ij8hA`H3Mmn5_2YV0;ld<_1
+!s100 [cGTee_c9_TM]Y6oL3TGe2
+I>WWD?Dl^=RIgH?gmSaV`T2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1541514776
+w1541642047
 8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle/findstr.v
 FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle/findstr.v
 L0 1
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1541514806.000000
+Z4 !s108 1541643212.000000
 !s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle/findstr.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle/findstr.v|
 !i113 1
@@ -33,11 +33,11 @@ Z6 tCvgOpt 0
 vfindstr_tb
 R1
 !i10b 1
-!s100 EUQ9HD<=icFzGT3@SiONZ1
-IziE8?7QhWziWIjN^kF3Uc0
+!s100 zZlE9Sb2do3W;N3Vmk7Hk3
+IXVg0@3lU`dFO;2OCST4=m0
 R2
 R0
-w1541514777
+w1541643116
 8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench/findstr_tb.v
 FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench/findstr_tb.v
 L0 4

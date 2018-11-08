@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/simulation/modelsim
+vpushkey
+Z1 !s110 1541667908
+!i10b 1
+!s100 GWba5GX[_nYNY3^JU206e0
+I`kXmkHMe59]zRbkT<bV@M0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1541666235
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/module/pushkey.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/module/pushkey.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1541667908.000000
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/module/pushkey.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/module|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/module/pushkey.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/module
+Z6 tCvgOpt 0
+vpushkey_tb
+R1
+!i10b 1
+!s100 LBKXeG7=`O6n@X<6DLU5n3
+I2XhPIlRL6[ml7FjIB3kNC2
+R2
+R0
+w1541665912
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/testbench/pushkey_tb.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/testbench/pushkey_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/testbench/pushkey_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/testbench|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/testbench/pushkey_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class02_pushkey/testbench
+R6

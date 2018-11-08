@@ -1,0 +1,22 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneive
+Quartus root          :  c:/intelfpga_lite/18.0/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/18.0/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  pushkey_8_1200mv_85c_slow.vo
+Sim SDF File       :  pushkey_8_1200mv_85c_v_slow.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/intelfpga_lite/18.0/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File pushkey_run_msim_gate_verilog.do already exists - backing up current file as pushkey_run_msim_gate_verilog.do.bak2
+Info: Spawning ModelSim-Altera Simulation software 
+Info: NativeLink simulation flow was successful

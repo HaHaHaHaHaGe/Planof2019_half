@@ -1,0 +1,26 @@
+module count_led(
+	led1,
+	led2,
+	led3,
+	led4,
+	clk,
+	rst
+);
+
+reg [3:0]cnt;
+output wire led1,led2,led3,led4;
+input reg clk,rst;
+
+always@(posedge clk or negedge rst)
+if(!rst)
+	cnt = 4'b0;
+else begin
+	cnt = cnt + 1'b1;
+end
+
+ass
+
+
+
+
+endmodule

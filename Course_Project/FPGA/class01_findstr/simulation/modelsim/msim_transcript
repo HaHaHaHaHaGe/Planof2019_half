@@ -12,29 +12,29 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle {C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle/findstr.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:33:26 on Nov 06,2018
+# Start time: 10:13:32 on Nov 08,2018
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle" C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/moudle/findstr.v 
 # -- Compiling module findstr
 # 
 # Top level modules:
 # 	findstr
-# End time: 22:33:26 on Nov 06,2018, Elapsed time: 0:00:00
+# End time: 10:13:32 on Nov 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench {C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench/findstr_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:33:26 on Nov 06,2018
+# Start time: 10:13:32 on Nov 08,2018
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench" C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench/findstr_tb.v 
 # -- Compiling module findstr_tb
 # 
 # Top level modules:
 # 	findstr_tb
-# End time: 22:33:26 on Nov 06,2018, Elapsed time: 0:00:00
+# End time: 10:13:32 on Nov 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  findstr_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" findstr_tb 
-# Start time: 22:33:26 on Nov 06,2018
+# Start time: 10:13:32 on Nov 08,2018
 # Loading work.findstr_tb
 # Loading work.findstr
 # 
@@ -47,9 +47,5 @@
 # ** Note: $stop    : C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench/findstr_tb.v(43)
 #    Time: 10010 ns  Iteration: 0  Instance: /findstr_tb
 # Break in Module findstr_tb at C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class01_findstr/testbench/findstr_tb.v line 43
-restart
-run
-restart
-run
-# End time: 22:37:26 on Nov 06,2018, Elapsed time: 0:04:00
+# End time: 10:13:56 on Nov 08,2018, Elapsed time: 0:00:24
 # Errors: 0, Warnings: 0

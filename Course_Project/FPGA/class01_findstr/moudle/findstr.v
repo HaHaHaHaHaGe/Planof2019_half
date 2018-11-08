@@ -17,6 +17,14 @@ module findstr(
 	reg [3:0]cnt;
 	reg [2:0]state;
 	
+	localparam CHECK_W = 3'd0;
+	localparam CHECK_E = 3'd1;
+	localparam CHECK_L = 3'd2;
+	localparam CHECK_C = 3'd3;
+	localparam CHECK_O = 3'd4;
+	localparam CHECK_M = 3'd5;
+
+	
 	always@(posedge clk or negedge rst_n)
 	if(!rst_n) begin
 		state <= 3'd0;
@@ -24,61 +32,73 @@ module findstr(
 	end
 	else begin
 		case(state)
-			0:
+			CHECK_W:
 				if(dv)begin
 					if(data == "W")
-						state <= 3'd1;
+						state <= CHECK_E;
 					else
-						state <= 3'd0;
+						state <= CHECK_W;
 				end
-			1:
+				else
+					state <= CHECK_W;
+			CHECK_E:
 				if(dv)begin
 					if(data == "e")
-						state <= 3'd2;
+						state <= CHECK_L;
 					else if(data == "W")
-						state <= 3'd1;
+						state <= CHECK_E;
 					else
-						state <= 3'd0;
+						state <= CHECK_W;
 				end
-			2:
+				else
+					state <= CHECK_W;
+			CHECK_L:
 				if(dv)begin
 					if(data == "l")
-						state <= 3'd3;
+						state <= CHECK_C;
 					else if(data == "W")
-						state <= 3'd1;
+						state <= CHECK_E;
 					else
-						state <= 3'd0;
+						state <= CHECK_W;
 				end
-			3:
+				else
+					state <= CHECK_W;
+			CHECK_C:
 				if(dv)begin
 					if(data == "c")
-						state <= 3'd4;
+						state <= CHECK_O;
 					else if(data == "W")
-						state <= 3'd1;
+						state <= CHECK_E;
 					else
-						state <= 3'd0;
+						state <= CHECK_W;
 				end
-			4:
+				else
+					state <= CHECK_W;
+			CHECK_O:
 				if(dv)begin
 					if(data == "o")
-						state <= 3'd5;
+						state <= CHECK_M;
 					else if(data == "W")
-						state <= 3'd1;
+						state <= CHECK_E;
 					else
-						state <= 3'd0;
+						state <= CHECK_W;
 				end
-			5:
+				else
+					state <= CHECK_W;
+			CHECK_M:
 				if(dv)begin
 					if(data == "m") begin
-						state <= 3'd0;
+						state <= CHECK_W;
 						cnt <= cnt + 1'b1;
 					end
 					else if(data == "W")
-						state <= 3'd1;
+						state <= CHECK_E;
 					else
-						state <= 3'd0;
+						state <= CHECK_W;
 				end
-			default:state <= 3'd0;
+				else
+					state <= CHECK_W;
+			default:state <= CHECK_W;
 		endcase
 	end
 	assign num = cnt;

@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Nov 06 22:33:10 2018
+Fitter Status : Successful - Thu Nov 08 10:12:10 2018
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : findstr
 Top-level Entity Name : findstr
 Family : Cyclone IV E
 Device : EP4CE10F17C8
 Timing Models : Final
-Total logic elements : 31 / 10,320 ( < 1 % )
-    Total combinational functions : 31 / 10,320 ( < 1 % )
+Total logic elements : 32 / 10,320 ( < 1 % )
+    Total combinational functions : 32 / 10,320 ( < 1 % )
     Dedicated logic registers : 10 / 10,320 ( < 1 % )
 Total registers : 10
 Total pins : 16 / 180 ( 9 % )
