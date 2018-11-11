@@ -40,7 +40,7 @@
 #include "stm32h7xx_hal.h"
 extern void _Error_Handler(char *, int);
 /* USER CODE BEGIN 0 */
-extern unsigned char buffer[];
+
 /* USER CODE END 0 */
 /**
   * Initializes the Global MSP.
@@ -133,10 +133,7 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
 }
 
 /* USER CODE BEGIN 1 */
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-	HAL_UART_Transmit(huart,buffer,huart->RxXferSize,1000);
-}
+
 /* USER CODE END 1 */
 
 /**

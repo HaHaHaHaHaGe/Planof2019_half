@@ -36,7 +36,7 @@
 #include "stm32h7xx_it.h"
 
 /* USER CODE BEGIN 0 */
-
+extern unsigned char buffer[];
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -207,6 +207,9 @@ void USART1_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
-
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	HAL_UART_Transmit(huart,buffer,huart->RxXferSize,1000);
+}
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
