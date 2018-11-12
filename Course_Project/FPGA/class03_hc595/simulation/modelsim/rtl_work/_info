@@ -1,0 +1,123 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/simulation/modelsim
+vBCDdecoder
+Z1 !s110 1542026057
+!i10b 1
+!s100 :9;mb4TOMD;5T2e?EN4Cz2
+IY8anm_INfF[l:;S[OYhG=2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1542026011
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/BCDdecoder.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/BCDdecoder.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1542026057.000000
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/BCDdecoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/BCDdecoder.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module
+Z8 tCvgOpt 0
+n@b@c@ddecoder
+vBCDDisplay
+R1
+!i10b 1
+!s100 RImLP:6Yn_`T9L_bg1ih`0
+IX29moK0T[jW[E^a?XQ<n53
+R2
+R0
+w1542026010
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/BCDDisplay.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/BCDDisplay.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/BCDDisplay.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/BCDDisplay.v|
+!i113 1
+R6
+R7
+R8
+n@b@c@d@display
+vBCDDisplay_tb
+R1
+!i10b 1
+!s100 on7aC;eWMKHGoc8Ke[>:A3
+IHiN^d9;li5aDNU9RZOBB>3
+R2
+R0
+R3
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/testbench/BCDDisplay_tb.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/testbench/BCDDisplay_tb.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/testbench/BCDDisplay_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/testbench|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/testbench/BCDDisplay_tb.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/testbench
+R8
+n@b@c@d@display_tb
+vdevice_74hc595
+R1
+!i10b 1
+!s100 fQMNem654B=R2[^E_Vee[2
+IRSD^T?cUIJD0:CK3H2GzT3
+R2
+R0
+w1542015268
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/device_74hc595.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/device_74hc595.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/device_74hc595.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/device_74hc595.v|
+!i113 1
+R6
+R7
+R8
+vfrequencydivider
+R1
+!i10b 1
+!s100 I5jAbaU>=19B4OF7nX[nQ0
+I7D1XeWCNH^NfocOJ]@=YW3
+R2
+R0
+w1542017770
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/frequencydivider.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/frequencydivider.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/frequencydivider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/module/frequencydivider.v|
+!i113 1
+R6
+R7
+R8

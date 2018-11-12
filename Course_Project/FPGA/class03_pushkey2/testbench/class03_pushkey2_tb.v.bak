@@ -1,0 +1,15 @@
+module class03_pushkey2_tb();
+
+wire out;
+reg in,clk,rst;
+
+class03_pushkey2 class03_pushkey2_01(
+	.in(in),
+	.out(out),
+	.clk(clk),
+	.rst(rst)
+);
+
+
+
+endmodule

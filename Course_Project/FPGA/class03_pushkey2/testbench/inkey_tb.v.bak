@@ -1,0 +1,40 @@
+module inkey_tb();
+
+reg in,clk;
+wire out;
+
+inkey inkey_1(
+	.in(in),
+	.out(out),
+	.clk(clk)
+);
+
+
+initial begin
+in = 1;
+clk = 0;
+end
+
+always #1 clk <= ~clk;
+
+initial begin
+	repeat(50) begin
+		delay = {$randon} % 65536;
+		#delay in <= ~in;
+	end
+	
+	in <=0;
+	#100000;
+	in <=1;
+	
+	repeat(50) begin
+		delay = {$randon} % 65536;
+		#delay in <= ~in;
+	end
+	
+	#100000;
+	
+	$stop;
+end	
+
+endmodule

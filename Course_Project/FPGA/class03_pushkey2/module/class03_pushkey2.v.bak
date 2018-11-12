@@ -1,0 +1,40 @@
+module pushkey2(
+	in,
+	out,
+	clk,
+);
+
+	input in,clk;
+	output out;
+
+	
+	reg [31:0]cnt;
+	reg flag;
+	localparam One_Sec = 4'b0000;
+	localparam One_Two_Sec = 4'b0001;
+	localparam Two_Sec = 4'b0011;
+
+	
+	always@(posedge clk,negedge rst) begin
+		if(in == 1) begin
+			cnt <= cnt + 1;
+			if(cnt > 100_000_000)
+				flag <= Two_Sec;
+			else if (cnt > 50_000_000)
+				flag <= One_Two_Sec;
+			else
+				flag <= One_Sec;
+		end
+		else begin
+			cnt <= 0;
+			case(flag)
+				One_Sec:
+				One_Two_Sec:
+				Two_Sec:
+				default:
+			endcase
+			flag <= One_Sec;
+		end
+	end
+	
+endmodule

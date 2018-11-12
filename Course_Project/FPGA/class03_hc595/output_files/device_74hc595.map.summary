@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Nov 12 21:54:45 2018
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : device_74hc595
+Top-level Entity Name : test_74hc595
+Family : Cyclone IV E
+Total logic elements : 247
+    Total combinational functions : 199
+    Dedicated logic registers : 182
+Total registers : 182
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,17 @@
+module device_74hc595_tb();
+
+
+device_74hc595 device_74hc595_01(
+	.clk(),
+	.rst(),
+	.data(),
+	.busy(),
+	.lock(),
+	.lock595(),
+	.out595(),
+	.clk595()
+);
+
+
+
+endmodule

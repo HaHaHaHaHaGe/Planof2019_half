@@ -1,0 +1,20 @@
+`timescale 1ns/1ns
+module BCDDisplay();
+
+input clk,rst,lockdata;
+input [63:0]data;
+output lock595,out595,clk595;
+
+BCDDisplay BCDDisplay_1(
+	.clk(clk),
+	.rst(rst),
+	.lockdata(lockdata),
+	.data(data),
+	.lock595(lock595),
+	.out595(out595),
+	.clk595(clk595)
+);
+
+
+
+endmodule

@@ -1,0 +1,42 @@
+module test_74hc595(
+	clk,
+	rst,
+	key,
+	lock595,
+	out595,
+	clk595
+);
+
+input wire clk,rst,lock;
+wire lock,rst2;
+reg [15:0]data;
+output lock595,out595,clk595;
+
+
+inkey inkey_1(
+	.in(key),
+	.out(lock),
+	.clk(clk)
+);
+
+inkey inkey_1(
+	.in(rst),
+	.out(rst2),
+	.clk(clk)
+);
+
+
+device_74hc595 device_74hc595_01(
+	.clk(clk),
+	.rst(rst2),
+	.data(data),
+	.busy(),
+	.lock(lock),
+	.lock595(lock595),
+	.out595(out595),
+	.clk595(clk595)
+);
+
+assign data = 16'b00000001_11111111;
+
+endmodule

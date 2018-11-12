@@ -1,0 +1,38 @@
+module device_74hc595(
+	clk,
+	rst,
+	data,
+	busy,
+	lock,
+	lock595,
+	out595,
+	clk595
+);
+
+input clk,rst,lock;
+input [15:0]data;
+output lock595,clk595,busy;
+output out595;
+
+reg busy;
+reg [3:0]send_cnt;
+reg [15:0]data_buffer;
+
+always@(posedge clk,posedge lock,negedge rst) begin
+if(!rst)begin
+	send_cnt <= 4'b0;
+	busy <= 1'b0;
+	data_buffer <= 16:0;
+end
+else if(lock) begin
+	send_cnt <= 4'b0;
+	data_buffer <= data;
+	busy <= 1'b1;
+end
+else if(send_cnt == 16)
+	state <= 1'bz;
+else
+	state <= 1'b1;
+end
+
+endmodule

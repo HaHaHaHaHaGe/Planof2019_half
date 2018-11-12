@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/simulation/modelsim
+vdevice_74hc595
+Z1 !s110 1542015301
+!i10b 1
+!s100 f>eZ0nDeJBBfM=YUMGPgo1
+IARO43?knDMXicnKnY5VFM2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1542015289
+Z4 8device_74hc595_8_1200mv_85c_slow.vo
+Z5 Fdevice_74hc595_8_1200mv_85c_slow.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1542015301.000000
+Z8 !s107 device_74hc595_8_1200mv_85c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|device_74hc595_8_1200mv_85c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vdevice_74hc595_tb
+R1
+!i10b 1
+!s100 zDC4;YSJY9M0;5Vf>>X6?0
+Iz[z@W5SjQ8`8Ekg5Al<5k0
+R2
+R0
+w1542014810
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/testbench/device_74hc595_tb.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/testbench/device_74hc595_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/testbench/device_74hc595_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/testbench|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/testbench/device_74hc595_tb.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class03_hc595/testbench
+R12
+vhard_block
+R1
+!i10b 1
+!s100 UzRG23dV7Q6B87kBhD;@31
+I7me0z6`YbahiHWBcFMjXi3
+R2
+R0
+R3
+R4
+R5
+L0 1617
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12

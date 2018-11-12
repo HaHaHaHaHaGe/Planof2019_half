@@ -1,0 +1,47 @@
+module BCDDisplay(
+	clk,
+	rst,
+	lock,
+	data,
+	lock595,
+	out595,
+	clk595
+);
+
+wire fclk;
+input clk,rst;
+output lock595,out595,clk595;
+
+BCDdecoder BCDdecoder_01(
+	.data(),
+	.out()
+);
+
+
+frequencydivider frequencydivider_01(
+	.clk(clk),
+	.rst(rst),
+	.fclk(fclk)
+);
+
+
+
+device_74hc595 device_74hc595_01(
+	.clk(fclk),
+	.rst(rst),
+	.data(),
+	.busy(),
+	.lock(),
+	.lock595(lock595),
+	.out595(out595),
+	.clk595(clk595)
+);
+
+
+
+
+
+
+
+
+endmodule

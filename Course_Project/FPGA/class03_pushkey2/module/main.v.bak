@@ -1,0 +1,32 @@
+module main(
+	in,
+	clk,
+	out,
+	rst
+);
+
+
+input in;
+input clk;
+input rst;
+wire rst_;
+wire keyout;
+
+
+inkey inkey_1(
+	.in(in),
+	.out(keyout),
+	.clk(clk)
+);
+
+
+
+class03_pushkey2 class03_pushkey2_1(
+	.in(keyout),
+	.out(out),
+	.clk(clk),
+	.rst(rst_)
+);
+
+assign rst_ = ~rst;
+endmodule
