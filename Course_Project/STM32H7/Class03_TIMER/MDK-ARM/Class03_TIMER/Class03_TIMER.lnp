@@ -1,0 +1,27 @@
+--cpu Cortex-M7.fp.dp
+"class03_timer\startup_stm32h743xx.o"
+"class03_timer\main.o"
+"class03_timer\stm32h7xx_it.o"
+"class03_timer\stm32h7xx_hal_msp.o"
+"class03_timer\stm32h7xx_hal_cortex.o"
+"class03_timer\stm32h7xx_hal_tim.o"
+"class03_timer\stm32h7xx_hal_tim_ex.o"
+"class03_timer\stm32h7xx_hal_rcc.o"
+"class03_timer\stm32h7xx_hal_rcc_ex.o"
+"class03_timer\stm32h7xx_hal_flash.o"
+"class03_timer\stm32h7xx_hal_flash_ex.o"
+"class03_timer\stm32h7xx_hal_gpio.o"
+"class03_timer\stm32h7xx_hal_hsem.o"
+"class03_timer\stm32h7xx_hal_dma.o"
+"class03_timer\stm32h7xx_hal_dma_ex.o"
+"class03_timer\stm32h7xx_hal_mdma.o"
+"class03_timer\stm32h7xx_hal_pwr.o"
+"class03_timer\stm32h7xx_hal_pwr_ex.o"
+"class03_timer\stm32h7xx_hal.o"
+"class03_timer\stm32h7xx_hal_i2c.o"
+"class03_timer\stm32h7xx_hal_i2c_ex.o"
+"class03_timer\system_stm32h7xx.o"
+--library_type=microlib --strict --scatter "Class03_TIMER\Class03_TIMER.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Class03_TIMER.map" -o Class03_TIMER\Class03_TIMER.axf
