@@ -1,0 +1,31 @@
+module KEY_Selector(
+	key1,
+	key2,
+	clk,
+	rst,
+	out
+);
+
+input key1,key2,clk,rst;
+output reg [2:0]out;
+wire ok1,ok2;
+
+inkey inkey1(
+	.in(key1),
+	.out(ok1),
+	.clk(clk)
+);
+
+inkey inkey2(
+	.in(key2),
+	.out(ok2),
+	.clk(clk)
+);
+
+always@(posedge ok1)
+out <= out - 1;
+always@(posedge ok2)
+out <= out + 1;
+always@(negedge rst)
+out <= 0;
+endmodule

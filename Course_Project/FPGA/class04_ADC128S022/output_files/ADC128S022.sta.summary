@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -4.236
+TNS   : -406.060
+
+Type  : Slow 1200mV 85C Model Setup 'BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|fclk'
+Slack : -2.965
+TNS   : -44.255
+
+Type  : Slow 1200mV 85C Model Setup 'frequencydivider:frequencydivider1|fclk'
+Slack : -2.789
+TNS   : -95.904
+
+Type  : Slow 1200mV 85C Model Hold 'BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|fclk'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'frequencydivider:frequencydivider1|fclk'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -218.615
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'frequencydivider:frequencydivider1|fclk'
+Slack : -1.487
+TNS   : -66.915
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|fclk'
+Slack : -1.487
+TNS   : -41.636
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.906
+TNS   : -367.614
+
+Type  : Slow 1200mV 0C Model Setup 'BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|fclk'
+Slack : -2.749
+TNS   : -38.975
+
+Type  : Slow 1200mV 0C Model Setup 'frequencydivider:frequencydivider1|fclk'
+Slack : -2.534
+TNS   : -86.773
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|fclk'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'frequencydivider:frequencydivider1|fclk'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -218.615
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'frequencydivider:frequencydivider1|fclk'
+Slack : -1.487
+TNS   : -66.915
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|fclk'
+Slack : -1.487
+TNS   : -41.636
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.208
+TNS   : -95.754
+
+Type  : Fast 1200mV 0C Model Setup 'BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|fclk'
+Slack : -0.760
+TNS   : -4.737
+
+Type  : Fast 1200mV 0C Model Setup 'frequencydivider:frequencydivider1|fclk'
+Slack : -0.549
+TNS   : -14.953
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'frequencydivider:frequencydivider1|fclk'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|fclk'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -157.396
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'frequencydivider:frequencydivider1|fclk'
+Slack : -1.000
+TNS   : -45.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|fclk'
+Slack : -1.000
+TNS   : -28.000
+
+------------------------------------------------------------

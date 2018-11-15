@@ -1,0 +1,7 @@
+
+State Machine - |voltmeter|BCDDisplay:BCDDisplay1|device_74hc595:device_74hc595_01|flag
+Name flag.LOCK1_STATE flag.SEND_STATE flag.LOCK0_STATE flag.IDLE_STATE 
+flag.IDLE_STATE 0 0 0 0 
+flag.LOCK0_STATE 0 0 1 1 
+flag.SEND_STATE 0 1 0 1 
+flag.LOCK1_STATE 1 0 0 1 

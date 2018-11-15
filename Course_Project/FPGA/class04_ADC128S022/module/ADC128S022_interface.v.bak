@@ -1,0 +1,34 @@
+module ADC128S022_interface(
+	ADDR,
+	DATA,
+	START,
+	BUSY,
+	CLK,
+	RST,
+	adc_sclk,
+	adc_saddr,
+	adc_csn,
+	adc_sdat
+);
+
+input [2:0]ADDR;
+input START,RST,CLK;
+
+output reg BUSY;
+output reg [11:0]DATA;
+
+output reg adc_sclk,adc_saddr,adc_csn,adc_sdat;
+
+localparam 
+
+always@(posedge CLK,negedge RST)
+if(!RST) begin
+	DATA <= 12'b0;
+	BUSY <= 1;
+	adc_csn <= 0;
+	adc_saddr <= 0;
+	adc_sclk <= 0;
+	adc_sdat <= 0;
+end
+
+endmodule
