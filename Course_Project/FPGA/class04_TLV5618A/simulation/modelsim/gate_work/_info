@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/simulation/modelsim
+vhard_block
+Z1 !s110 1542292668
+!i10b 1
+!s100 CCRQBm<k@@abM>Fom<L4S2
+IHFJK2:^z_n=ENo@_ei6@Z0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1542292640
+Z4 8class04_TLV5618A_8_1200mv_85c_slow.vo
+Z5 Fclass04_TLV5618A_8_1200mv_85c_slow.vo
+L0 1602
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1542292668.000000
+Z8 !s107 class04_TLV5618A_8_1200mv_85c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|class04_TLV5618A_8_1200mv_85c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vtlv5618a_interface
+R1
+!i10b 1
+!s100 f^agNz?hMS=d?^NigjKg<0
+ImFPlgTfaji>:YlCcFBT5z1
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vtlv5618a_interface_tb
+R1
+!i10b 1
+!s100 OF9PoC4Y5I3^aj]YI[:RH0
+IO_meY8ZdU;O>fnI@NEDze0
+R2
+R0
+w1542284911
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench/tlv5618a_interface_tb.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench/tlv5618a_interface_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench/tlv5618a_interface_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench/tlv5618a_interface_tb.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench
+R12

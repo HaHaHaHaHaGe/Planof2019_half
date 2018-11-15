@@ -1,0 +1,67 @@
+# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do class04_TLV5618A_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {class04_TLV5618A_8_1200mv_85c_slow.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:37:48 on Nov 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." class04_TLV5618A_8_1200mv_85c_slow.vo 
+# -- Compiling module tlv5618a_interface
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	tlv5618a_interface
+# End time: 22:37:48 on Nov 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench {C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench/tlv5618a_interface_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:37:48 on Nov 15,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench" C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench/tlv5618a_interface_tb.v 
+# -- Compiling module tlv5618a_interface_tb
+# 
+# Top level modules:
+# 	tlv5618a_interface_tb
+# End time: 22:37:48 on Nov 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  tlv5618a_interface_tb
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" tlv5618a_interface_tb 
+# Start time: 22:37:48 on Nov 15,2018
+# Loading work.tlv5618a_interface_tb
+# Loading work.tlv5618a_interface
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# 
+# Loading instances from class04_TLV5618A_8_1200mv_85c_v_slow.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from class04_TLV5618A_8_1200mv_85c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /tlv5618a_interface_tb File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench/tlv5618a_interface_tb.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench/tlv5618a_interface_tb.v(49)
+#    Time: 1857050 ps  Iteration: 0  Instance: /tlv5618a_interface_tb
+# Break in Module tlv5618a_interface_tb at C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench/tlv5618a_interface_tb.v line 49
+# End time: 22:39:45 on Nov 15,2018, Elapsed time: 0:01:57
+# Errors: 0, Warnings: 0

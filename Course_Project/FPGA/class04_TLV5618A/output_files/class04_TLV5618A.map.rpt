@@ -1,0 +1,523 @@
+Analysis & Synthesis report for class04_TLV5618A
+Fri Nov 16 00:40:03 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |voltmeter|BCDDisplay:BCDDisplay1|device_74hc595:device_74hc595_01|flag
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1"
+ 14. Port Connectivity Checks: "tlv5618a_device:tlv5618a_device1"
+ 15. Port Connectivity Checks: "BCDDisplay:BCDDisplay1|BCDdecoder:BCDdecoder_01"
+ 16. Port Connectivity Checks: "BCDDisplay:BCDDisplay1"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov 16 00:40:03 2018       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; class04_TLV5618A                            ;
+; Top-level Entity Name              ; voltmeter                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 354                                         ;
+;     Total combinational functions  ; 302                                         ;
+;     Dedicated logic registers      ; 243                                         ;
+; Total registers                    ; 243                                         ;
+; Total pins                         ; 14                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; voltmeter          ; class04_TLV5618A   ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                      ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; module/voltmeter.v               ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/voltmeter.v            ;         ;
+; module/KEY_Selector.v            ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/KEY_Selector.v         ;         ;
+; module/inkey.v                   ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/inkey.v                ;         ;
+; module/frequencydivider.v        ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/frequencydivider.v     ;         ;
+; module/device_74hc595.v          ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/device_74hc595.v       ;         ;
+; module/BCDDisplay.v              ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/BCDDisplay.v           ;         ;
+; module/BCDdecoder.v              ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/BCDdecoder.v           ;         ;
+; module/ADC128S022_interface.v    ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/ADC128S022_interface.v ;         ;
+; module/tlv5618a_interface.v      ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/tlv5618a_interface.v   ;         ;
+; module/tlv5618a_device.v         ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/tlv5618a_device.v      ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 354       ;
+;                                             ;           ;
+; Total combinational functions               ; 302       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 107       ;
+;     -- 3 input functions                    ; 26        ;
+;     -- <=2 input functions                  ; 169       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 186       ;
+;     -- arithmetic mode                      ; 116       ;
+;                                             ;           ;
+; Total registers                             ; 243       ;
+;     -- Dedicated logic registers            ; 243       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 14        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 172       ;
+; Total fan-out                               ; 1754      ;
+; Average fan-out                             ; 3.06      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                   ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                ; Entity Name          ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------+----------------------+--------------+
+; |voltmeter                                      ; 302 (2)             ; 243 (1)                   ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |voltmeter                                                                         ; voltmeter            ; work         ;
+;    |ADC128S022_interface:ADC128S022_interface1| ; 51 (51)             ; 44 (44)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |voltmeter|ADC128S022_interface:ADC128S022_interface1                              ; ADC128S022_interface ; work         ;
+;    |BCDDisplay:BCDDisplay1|                     ; 119 (33)            ; 97 (36)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |voltmeter|BCDDisplay:BCDDisplay1                                                  ; BCDDisplay           ; work         ;
+;       |BCDdecoder:BCDdecoder_01|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |voltmeter|BCDDisplay:BCDDisplay1|BCDdecoder:BCDdecoder_01                         ; BCDdecoder           ; work         ;
+;       |device_74hc595:device_74hc595_01|        ; 28 (28)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |voltmeter|BCDDisplay:BCDDisplay1|device_74hc595:device_74hc595_01                 ; device_74hc595       ; work         ;
+;       |frequencydivider:frequencydivider_01|    ; 51 (51)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |voltmeter|BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01             ; frequencydivider     ; work         ;
+;    |KEY_Selector:KEY_Selector1|                 ; 97 (7)              ; 75 (5)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |voltmeter|KEY_Selector:KEY_Selector1                                              ; KEY_Selector         ; work         ;
+;       |inkey:inkey1|                            ; 45 (45)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |voltmeter|KEY_Selector:KEY_Selector1|inkey:inkey1                                 ; inkey                ; work         ;
+;       |inkey:inkey2|                            ; 45 (45)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |voltmeter|KEY_Selector:KEY_Selector1|inkey:inkey2                                 ; inkey                ; work         ;
+;    |frequencydivider:frequencydivider1|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |voltmeter|frequencydivider:frequencydivider1                                      ; frequencydivider     ; work         ;
+;    |tlv5618a_device:tlv5618a_device1|           ; 32 (7)              ; 25 (7)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |voltmeter|tlv5618a_device:tlv5618a_device1                                        ; tlv5618a_device      ; work         ;
+;       |tlv5618a_interface:tlv5618a_interface1|  ; 25 (25)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |voltmeter|tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1 ; tlv5618a_interface   ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------+
+; State Machine - |voltmeter|BCDDisplay:BCDDisplay1|device_74hc595:device_74hc595_01|flag    ;
++------------------+------------------+-----------------+------------------+-----------------+
+; Name             ; flag.LOCK1_STATE ; flag.SEND_STATE ; flag.LOCK0_STATE ; flag.IDLE_STATE ;
++------------------+------------------+-----------------+------------------+-----------------+
+; flag.IDLE_STATE  ; 0                ; 0               ; 0                ; 0               ;
+; flag.LOCK0_STATE ; 0                ; 0               ; 1                ; 1               ;
+; flag.SEND_STATE  ; 0                ; 1               ; 0                ; 1               ;
+; flag.LOCK1_STATE ; 1                ; 0               ; 0                ; 1               ;
++------------------+------------------+-----------------+------------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                      ;
++-------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+; Register name                                                                             ; Reason for Removal                                                                          ;
++-------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+; BCDDisplay:BCDDisplay1|data_buffer[12..27,31]                                             ; Stuck at GND due to stuck port data_in                                                      ;
+; tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|DATA[13]          ; Stuck at GND due to stuck port data_in                                                      ;
+; BCDDisplay:BCDDisplay1|cnt[0,1]                                                           ; Stuck at GND due to stuck port data_in                                                      ;
+; BCDDisplay:BCDDisplay1|device_74hc595:device_74hc595_01|data_buffer[15]                   ; Stuck at GND due to stuck port data_in                                                      ;
+; tlv5618a_device:tlv5618a_device1|BUFFER[0,1,3,4,8..10]                                    ; Merged with tlv5618a_device:tlv5618a_device1|BUFFER[11]                                     ;
+; tlv5618a_device:tlv5618a_device1|BUFFER[2,5,6]                                            ; Merged with tlv5618a_device:tlv5618a_device1|BUFFER[7]                                      ;
+; tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|DATA[1,3,4,8..11] ; Merged with tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|DATA[0] ;
+; tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|DATA[5..7]        ; Merged with tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|DATA[2] ;
+; frequencydivider:frequencydivider1|cnt[8]                                                 ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[8]              ;
+; frequencydivider:frequencydivider1|cnt[7]                                                 ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[7]              ;
+; frequencydivider:frequencydivider1|cnt[6]                                                 ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[6]              ;
+; frequencydivider:frequencydivider1|cnt[5]                                                 ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[5]              ;
+; frequencydivider:frequencydivider1|cnt[4]                                                 ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[4]              ;
+; frequencydivider:frequencydivider1|cnt[2]                                                 ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[2]              ;
+; frequencydivider:frequencydivider1|cnt[31]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[31]             ;
+; frequencydivider:frequencydivider1|cnt[30]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[30]             ;
+; frequencydivider:frequencydivider1|cnt[29]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[29]             ;
+; frequencydivider:frequencydivider1|cnt[28]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[28]             ;
+; frequencydivider:frequencydivider1|cnt[27]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[27]             ;
+; frequencydivider:frequencydivider1|cnt[26]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[26]             ;
+; frequencydivider:frequencydivider1|cnt[25]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[25]             ;
+; frequencydivider:frequencydivider1|cnt[24]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[24]             ;
+; frequencydivider:frequencydivider1|cnt[23]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[23]             ;
+; frequencydivider:frequencydivider1|cnt[22]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[22]             ;
+; frequencydivider:frequencydivider1|cnt[21]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[21]             ;
+; frequencydivider:frequencydivider1|cnt[20]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[20]             ;
+; frequencydivider:frequencydivider1|cnt[19]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[19]             ;
+; frequencydivider:frequencydivider1|cnt[18]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[18]             ;
+; frequencydivider:frequencydivider1|cnt[17]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[17]             ;
+; frequencydivider:frequencydivider1|cnt[16]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[16]             ;
+; frequencydivider:frequencydivider1|cnt[15]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[15]             ;
+; frequencydivider:frequencydivider1|cnt[14]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[14]             ;
+; frequencydivider:frequencydivider1|cnt[13]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[13]             ;
+; frequencydivider:frequencydivider1|cnt[12]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[12]             ;
+; frequencydivider:frequencydivider1|cnt[11]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[11]             ;
+; frequencydivider:frequencydivider1|cnt[10]                                                ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[10]             ;
+; frequencydivider:frequencydivider1|cnt[9]                                                 ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[9]              ;
+; frequencydivider:frequencydivider1|cnt[3]                                                 ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[3]              ;
+; frequencydivider:frequencydivider1|cnt[1]                                                 ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[1]              ;
+; frequencydivider:frequencydivider1|cnt[0]                                                 ; Merged with BCDDisplay:BCDDisplay1|frequencydivider:frequencydivider_01|cnt[0]              ;
+; BCDDisplay:BCDDisplay1|device_74hc595:device_74hc595_01|flag~8                            ; Lost fanout                                                                                 ;
+; BCDDisplay:BCDDisplay1|device_74hc595:device_74hc595_01|flag~9                            ; Lost fanout                                                                                 ;
+; Total Number of Removed Registers = 75                                                    ;                                                                                             ;
++-------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 243   ;
+; Number of registers using Synchronous Clear  ; 81    ;
+; Number of registers using Synchronous Load   ; 9     ;
+; Number of registers using Asynchronous Clear ; 172   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 152   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                               ;
++----------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                ; Fan out ;
++----------------------------------------------------------------------------------+---------+
+; tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|cnt[0]   ; 6       ;
+; tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|cnt[1]   ; 6       ;
+; tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|cnt[2]   ; 4       ;
+; tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|cnt[3]   ; 3       ;
+; BCDDisplay:BCDDisplay1|device_74hc595:device_74hc595_01|clk595                   ; 5       ;
+; ADC128S022_interface:ADC128S022_interface1|adc_sclk                              ; 2       ;
+; ADC128S022_interface:ADC128S022_interface1|adc_csn                               ; 2       ;
+; tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|dac_sclk ; 4       ;
+; tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|dac_csn  ; 2       ;
+; tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|flag     ; 16      ;
+; BCDDisplay:BCDDisplay1|selecter[0]                                               ; 3       ;
+; tlv5618a_device:tlv5618a_device1|R0                                              ; 2       ;
+; tlv5618a_device:tlv5618a_device1|flag                                            ; 4       ;
+; BCDDisplay:BCDDisplay1|flag                                                      ; 21      ;
+; BCDDisplay:BCDDisplay1|cnt[2]                                                    ; 10      ;
+; Total number of inverted registers = 15                                          ;         ;
++----------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |voltmeter|ADC128S022_interface:ADC128S022_interface1|Address[2]                          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |voltmeter|ADC128S022_interface:ADC128S022_interface1|cnt2[3]                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |voltmeter|ADC128S022_interface:ADC128S022_interface1|cnt[6]                              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |voltmeter|tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|cnt[5] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |voltmeter|KEY_Selector:KEY_Selector1|inkey:inkey1|cnt[23]                                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |voltmeter|KEY_Selector:KEY_Selector1|inkey:inkey2|cnt[8]                                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |voltmeter|tlv5618a_device:tlv5618a_device1|BUFFER[11]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |voltmeter|BCDDisplay:BCDDisplay1|device_74hc595:device_74hc595_01|send_cnt[0]            ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |voltmeter|BCDDisplay:BCDDisplay1|srcdata[0]                                              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |voltmeter|tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1|cnt[1] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |voltmeter|BCDDisplay:BCDDisplay1|device_74hc595:device_74hc595_01|Selector3              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1" ;
++----------+-------+----------+-----------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                               ;
++----------+-------+----------+-----------------------------------------------------------------------+
+; data[14] ; Input ; Info     ; Stuck at VCC                                                          ;
+; data[13] ; Input ; Info     ; Stuck at GND                                                          ;
++----------+-------+----------+-----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "tlv5618a_device:tlv5618a_device1" ;
++---------------+-------+----------+---------------------------+
+; Port          ; Type  ; Severity ; Details                   ;
++---------------+-------+----------+---------------------------+
+; DATA_A[7..5]  ; Input ; Info     ; Stuck at VCC              ;
+; DATA_A[11..8] ; Input ; Info     ; Stuck at GND              ;
+; DATA_A[4..3]  ; Input ; Info     ; Stuck at GND              ;
+; DATA_A[1..0]  ; Input ; Info     ; Stuck at GND              ;
+; DATA_A[2]     ; Input ; Info     ; Stuck at VCC              ;
+; DATA_B        ; Input ; Info     ; Stuck at VCC              ;
++---------------+-------+----------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BCDDisplay:BCDDisplay1|BCDdecoder:BCDdecoder_01"                                                                                                                                ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "BCDDisplay:BCDDisplay1" ;
++--------------+-------+----------+------------------+
+; Port         ; Type  ; Severity ; Details          ;
++--------------+-------+----------+------------------+
+; data[27..12] ; Input ; Info     ; Stuck at GND     ;
+; data[31]     ; Input ; Info     ; Stuck at GND     ;
++--------------+-------+----------+------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 14                          ;
+; cycloneiii_ff         ; 243                         ;
+;     CLR               ; 83                          ;
+;     CLR SCLR          ; 1                           ;
+;     ENA CLR           ; 65                          ;
+;     ENA CLR SCLR      ; 14                          ;
+;     ENA CLR SLD       ; 9                           ;
+;     ENA SCLR          ; 64                          ;
+;     SCLR              ; 2                           ;
+;     plain             ; 5                           ;
+; cycloneiii_lcell_comb ; 307                         ;
+;     arith             ; 116                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 115                         ;
+;     normal            ; 191                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 23                          ;
+;         2 data inputs ; 34                          ;
+;         3 data inputs ; 26                          ;
+;         4 data inputs ; 107                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.79                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Fri Nov 16 00:39:53 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off class04_TLV5618A -c class04_TLV5618A
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file module/voltmeter.v
+    Info (12023): Found entity 1: voltmeter File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/voltmeter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/key_selector.v
+    Info (12023): Found entity 1: KEY_Selector File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/KEY_Selector.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/inkey.v
+    Info (12023): Found entity 1: inkey File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/inkey.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/frequencydivider.v
+    Info (12023): Found entity 1: frequencydivider File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/frequencydivider.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/device_74hc595.v
+    Info (12023): Found entity 1: device_74hc595 File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/device_74hc595.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/bcddisplay.v
+    Info (12023): Found entity 1: BCDDisplay File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/BCDDisplay.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/bcddecoder.v
+    Info (12023): Found entity 1: BCDdecoder File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/BCDdecoder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/adc128s022_interface.v
+    Info (12023): Found entity 1: ADC128S022_interface File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/ADC128S022_interface.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/tlv5618a_interface.v
+    Info (12023): Found entity 1: tlv5618a_interface File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/tlv5618a_interface.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbench/tlv5618a_interface_tb.v
+    Info (12023): Found entity 1: tlv5618a_interface_tb File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench/tlv5618a_interface_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file module/tlv5618a_device.v
+    Info (12023): Found entity 1: tlv5618a_device File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/tlv5618a_device.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbench/tlv5618a_device_tb.v
+    Info (12023): Found entity 1: tlv5618a_device_tb File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/testbench/tlv5618a_device_tb.v Line: 2
+Info (12127): Elaborating entity "voltmeter" for the top level hierarchy
+Info (12128): Elaborating entity "frequencydivider" for hierarchy "frequencydivider:frequencydivider1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/voltmeter.v Line: 30
+Info (12128): Elaborating entity "KEY_Selector" for hierarchy "KEY_Selector:KEY_Selector1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/voltmeter.v Line: 37
+Warning (10230): Verilog HDL assignment warning at KEY_Selector.v(46): truncated value with size 32 to match size of target (3) File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/KEY_Selector.v Line: 46
+Warning (10230): Verilog HDL assignment warning at KEY_Selector.v(48): truncated value with size 32 to match size of target (3) File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/KEY_Selector.v Line: 48
+Info (12128): Elaborating entity "inkey" for hierarchy "KEY_Selector:KEY_Selector1|inkey:inkey1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/KEY_Selector.v Line: 17
+Info (12128): Elaborating entity "BCDDisplay" for hierarchy "BCDDisplay:BCDDisplay1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/voltmeter.v Line: 45
+Warning (10230): Verilog HDL assignment warning at BCDDisplay.v(61): truncated value with size 32 to match size of target (8) File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/BCDDisplay.v Line: 61
+Warning (10230): Verilog HDL assignment warning at BCDDisplay.v(69): truncated value with size 32 to match size of target (8) File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/BCDDisplay.v Line: 69
+Info (12128): Elaborating entity "BCDdecoder" for hierarchy "BCDDisplay:BCDDisplay1|BCDdecoder:BCDdecoder_01" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/BCDDisplay.v Line: 29
+Info (12128): Elaborating entity "device_74hc595" for hierarchy "BCDDisplay:BCDDisplay1|device_74hc595:device_74hc595_01" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/BCDDisplay.v Line: 46
+Info (12128): Elaborating entity "ADC128S022_interface" for hierarchy "ADC128S022_interface:ADC128S022_interface1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/voltmeter.v Line: 57
+Info (12128): Elaborating entity "tlv5618a_device" for hierarchy "tlv5618a_device:tlv5618a_device1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/voltmeter.v Line: 66
+Info (12128): Elaborating entity "tlv5618a_interface" for hierarchy "tlv5618a_device:tlv5618a_device1|tlv5618a_interface:tlv5618a_interface1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/tlv5618a_device.v Line: 39
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/module/device_74hc595.v Line: 14
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/output_files/class04_TLV5618A.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 369 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 355 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4804 megabytes
+    Info: Processing ended: Fri Nov 16 00:40:03 2018
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class04_TLV5618A/output_files/class04_TLV5618A.map.smsg.
+
+

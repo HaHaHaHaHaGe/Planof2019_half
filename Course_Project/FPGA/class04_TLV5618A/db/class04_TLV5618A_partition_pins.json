@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "lock595",
+					"strict" : false
+				},
+				{
+					"name" : "out595",
+					"strict" : false
+				},
+				{
+					"name" : "clk595",
+					"strict" : false
+				},
+				{
+					"name" : "adc_sclk",
+					"strict" : false
+				},
+				{
+					"name" : "adc_saddr",
+					"strict" : false
+				},
+				{
+					"name" : "adc_csn",
+					"strict" : false
+				},
+				{
+					"name" : "dac_sclk",
+					"strict" : false
+				},
+				{
+					"name" : "dac_din",
+					"strict" : false
+				},
+				{
+					"name" : "dac_csn",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "adc_sdat",
+					"strict" : false
+				},
+				{
+					"name" : "key1",
+					"strict" : false
+				},
+				{
+					"name" : "key2",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
