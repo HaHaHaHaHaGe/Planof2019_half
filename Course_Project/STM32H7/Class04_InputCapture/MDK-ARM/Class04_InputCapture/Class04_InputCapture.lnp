@@ -1,0 +1,27 @@
+--cpu Cortex-M7.fp.dp
+"class04_inputcapture\startup_stm32h743xx.o"
+"class04_inputcapture\main.o"
+"class04_inputcapture\stm32h7xx_it.o"
+"class04_inputcapture\stm32h7xx_hal_msp.o"
+"class04_inputcapture\stm32h7xx_hal_cortex.o"
+"class04_inputcapture\stm32h7xx_hal_tim.o"
+"class04_inputcapture\stm32h7xx_hal_tim_ex.o"
+"class04_inputcapture\stm32h7xx_hal_rcc.o"
+"class04_inputcapture\stm32h7xx_hal_rcc_ex.o"
+"class04_inputcapture\stm32h7xx_hal_flash.o"
+"class04_inputcapture\stm32h7xx_hal_flash_ex.o"
+"class04_inputcapture\stm32h7xx_hal_gpio.o"
+"class04_inputcapture\stm32h7xx_hal_hsem.o"
+"class04_inputcapture\stm32h7xx_hal_dma.o"
+"class04_inputcapture\stm32h7xx_hal_dma_ex.o"
+"class04_inputcapture\stm32h7xx_hal_mdma.o"
+"class04_inputcapture\stm32h7xx_hal_pwr.o"
+"class04_inputcapture\stm32h7xx_hal_pwr_ex.o"
+"class04_inputcapture\stm32h7xx_hal.o"
+"class04_inputcapture\stm32h7xx_hal_i2c.o"
+"class04_inputcapture\stm32h7xx_hal_i2c_ex.o"
+"class04_inputcapture\system_stm32h7xx.o"
+--library_type=microlib --strict --scatter "Class04_InputCapture\Class04_InputCapture.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Class04_InputCapture.map" -o Class04_InputCapture\Class04_InputCapture.axf
