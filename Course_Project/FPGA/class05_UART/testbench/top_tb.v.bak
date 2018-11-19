@@ -1,0 +1,13 @@
+module top_tb();
+
+reg clk,rst;
+wire tx;
+
+top top1(
+	.clk(),
+	.rst(),
+	.tx()
+);
+
+
+endmodule

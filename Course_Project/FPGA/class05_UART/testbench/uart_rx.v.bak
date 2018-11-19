@@ -1,0 +1,14 @@
+module uart_rx();
+
+reg clk,rst,
+
+uart_rx uart_rx1(
+	.clk(),
+	.rst(),
+	.irq(),
+	.clr(),
+	.data(),
+	.rx()
+);
+
+endmodule

@@ -1,0 +1,9 @@
+module uart_rx(
+	clk,
+	rst,
+	irq,
+	clr,
+	data,
+	rx
+);
+endmodule

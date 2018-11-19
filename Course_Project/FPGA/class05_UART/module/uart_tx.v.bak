@@ -1,0 +1,38 @@
+module uart_tx(
+	clk,
+	rst,
+	start,
+	data,
+	busy,
+	tx
+);
+
+input clk,rst,start;
+input [7:0]data;
+output reg busy,tx;
+
+reg flag;
+
+reg [8:0]cnt;
+
+localparam WAIT_STATE = 1'b0;
+localparam SEND_STATE = 1'b1;
+
+always@(posedge clk,negedge rst)
+if(!rst) begin
+	flag <= WAIT_STATE;
+	cnt <= 8'b0;
+	tx <= 1'b1;
+	busy <= 1'b0;
+end
+else case(flag)
+WAIT_STATE:
+if(start)begin
+	flag <= SEND_STATE;
+	cnt <= 8'b0;
+	busy <= 1'b1;
+end
+else
+SEND_STATE:
+endcase
+endmodule
