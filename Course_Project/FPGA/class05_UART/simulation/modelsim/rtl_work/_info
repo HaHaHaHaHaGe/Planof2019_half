@@ -8,47 +8,113 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/simulation/modelsim
+vfifo
+Z1 !s110 1542685634
+!i10b 1
+!s100 E>NeMD@o@Z1jf_XX>mX^@2
+IVI[NULPW2X@JLg@CHdn_>1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1542656206
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/fifo.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/fifo.v
+L0 39
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1542685634.000000
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/fifo.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module
+Z7 tCvgOpt 0
+vtop
+R1
+!i10b 1
+!s100 GiTB41HYHM3Boo6?mRlbH2
+I4?oD2982hUE<SCbB`6FaW2
+R2
+R0
+w1542657837
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v|
+!i113 1
+R5
+R6
+R7
+vtop_tb
+R1
+!i10b 1
+!s100 z4UeLXIA:M_BOg3KWiCi?3
+IkW_8zLb?:JG;b[XZSVI^k1
+R2
+R0
+w1542685602
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/top_tb.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/top_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/top_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/top_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench
+R7
 vuart_rx
-!s110 1542654441
+R1
 !i10b 1
 !s100 R;7Db3cMJ6JG`mE^EFS`O1
 ImMKI@ig7F5aehR:84:Bg`1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+R2
 R0
 w1542654403
 8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_rx.v
 FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_rx.v
 L0 1
-Z2 OV;L;10.5b;63
+R3
 r1
 !s85 0
 31
-!s108 1542654441.000000
+R4
 !s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_rx.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_rx.v|
 !i113 1
-Z3 o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module
-Z4 tCvgOpt 0
-vuart_rx_tb
-!s110 1542654442
-!i10b 1
-!s100 9`hmSHhRkYM^i7Gb5?ZCF1
-IBjnfh_h^ZMhLa3mQbiaQ22
+R5
+R6
+R7
+vuart_tx
 R1
-R0
-w1542654228
-8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/uart_rx_tb.v
-FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/uart_rx_tb.v
-L0 2
+!i10b 1
+!s100 @L7aiO5]K0DzXUb1TdfY@1
+I[n[CDXN9fXHOC0<67_Ao@1
 R2
+R0
+w1542658200
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_tx.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_tx.v
+L0 1
+R3
 r1
 !s85 0
 31
-!s108 1542654442.000000
-!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/uart_rx_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/uart_rx_tb.v|
-!i113 1
-R3
-!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench
 R4
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_tx.v|
+!i113 1
+R5
+R6
+R7

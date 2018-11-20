@@ -38,48 +38,35 @@ end
 else
 case(flag)
 
-COUNT_STATE: begin
-	if(begin_bit)
-		if(cnt == 9'd434)
-			flag <= CHECK_STATE;
-		else
-			cnt <= cnt + 1'b1;
-	else	
-		if(last!=rx) begin
-			flag <= CHECK_STATE;
-		end
-		else begin
-			cnt2 <= 4'b0;
-			last <= rx;
-			cnt <= cnt + 1'b1;
-		end
-	irq <= 1'b0;
-		
+COUNT_STATE:
+	if((begin_bit && cnt == 9'd434) || (!begin_bit && last == 1'b1 && rx == 1'b0)) begin
+		flag <= CHECK_STATE;
+		cnt <= 9'b0;
+	end
+	else begin
+		last <= rx;
+		irq <= 1'b0;
+		cnt <= cnt + 1'b1;	
 	end
 
 CHECK_STATE: begin
-	if(cnt2 == 4'b0 && last && !rx) begin
+	if(!begin_bit) begin
 		begin_bit <= 1'b1;
-		cnt2 <= cnt2 + 1'b1;
+		cnt2 <= 1'b1;
 		cnt <= 9'd217;
 	end
-	else if(cnt2 == 4'd10 && rx && begin_bit) begin
+	else if(cnt2 == 4'd10) begin
 		begin_bit <= 1'b0;
 		irq <= 1'b1;
 		data <= outdata;
 		cnt2 <= 4'b0;
-		cnt <= 9'b0;
 	end
 	else begin
 		outdata <= {rx,outdata[7:1]};
 		cnt2 <= cnt2 + 1'b1;
-		cnt <= 9'b0;
 	end
-
-		
-	
 	flag <= COUNT_STATE;
-	last <= rx;
+
 end		
 endcase
 	

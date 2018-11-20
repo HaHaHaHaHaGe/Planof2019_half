@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/simulation/modelsim
+vhard_block
+Z1 !s110 1542685767
+!i10b 1
+!s100 I?5NDh=8A^kb7h9U1`5:00
+IcR0M9B0a:<K7P9e8ME@VO0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1542685755
+Z4 8uart_8_1200mv_85c_slow.vo
+Z5 Fuart_8_1200mv_85c_slow.vo
+L0 5313
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1542685767.000000
+Z8 !s107 uart_8_1200mv_85c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|uart_8_1200mv_85c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vtop
+R1
+!i10b 1
+!s100 oK6:MBVH;5MaRgn@>dAPA3
+Ilk[bFH;bo[M@Vaa_z^Fh[2
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vtop_tb
+R1
+!i10b 1
+!s100 b12acLZdC2f=>JUWeE<zP2
+IkR?S^=P@E1b<1WEU`4zDl0
+R2
+R0
+w1542685734
+8C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/top_tb.v
+FC:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/top_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/top_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench|C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/top_tb.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench
+R12

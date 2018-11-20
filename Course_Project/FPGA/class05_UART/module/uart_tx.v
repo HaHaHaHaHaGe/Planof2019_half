@@ -48,7 +48,7 @@ SEND_STATE:
 		flag2 <= flag2 + 1'b1;
 		case(flag2)
 		8:tx <= 1'b1;
-		9:flag <= WAIT_STATE;
+		9:begin  flag <= WAIT_STATE; busy <= 1'b0; end
 		default:
 			tx <= Data[flag2];
 		endcase

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uart
-Tue Nov 20 03:14:47 2018
+Tue Nov 20 12:47:35 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -13,14 +13,21 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "uart_tx:uart_tx1"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
- 15. Analysis & Synthesis Suppressed Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |top|flag
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|altsyncram_2rm1:FIFOram
+ 16. Parameter Settings for User Entity Instance: fifo:fifo1|scfifo:scfifo_component
+ 17. scfifo Parameter Settings by Entity Instance
+ 18. Port Connectivity Checks: "fifo:fifo1"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,18 +53,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 20 03:14:47 2018       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 20 12:47:35 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; uart                                        ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 100                                         ;
-;     Total combinational functions  ; 68                                          ;
-;     Dedicated logic registers      ; 66                                          ;
-; Total registers                    ; 66                                          ;
-; Total pins                         ; 4                                           ;
+; Total logic elements               ; 160                                         ;
+;     Total combinational functions  ; 135                                         ;
+;     Dedicated logic registers      ; 105                                         ;
+; Total registers                    ; 105                                         ;
+; Total pins                         ; 5                                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
+; Total memory bits                  ; 65,536                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -71,6 +78,7 @@ refer to the applicable agreement for further details.
 ; Device                                                           ; EP4CE10F17C8       ;                    ;
 ; Top-level entity name                                            ; top                ; uart               ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
@@ -167,15 +175,29 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------+---------+
-; module/uart_tx.v                 ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_tx.v ;         ;
-; module/top.v                     ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v     ;         ;
-; module/uart_rx.v                 ; yes             ; User Verilog HDL File  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_rx.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; module/uart_tx.v                 ; yes             ; User Verilog HDL File        ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_tx.v       ;         ;
+; module/top.v                     ; yes             ; User Verilog HDL File        ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v           ;         ;
+; module/uart_rx.v                 ; yes             ; User Verilog HDL File        ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_rx.v       ;         ;
+; module/fifo.v                    ; yes             ; User Wizard-Generated File   ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/fifo.v          ;         ;
+; scfifo.tdf                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/scfifo.tdf                                      ;         ;
+; a_regfifo.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_regfifo.inc                                   ;         ;
+; a_dpfifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_dpfifo.inc                                    ;         ;
+; a_i2fifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_i2fifo.inc                                    ;         ;
+; a_fffifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_fffifo.inc                                    ;         ;
+; a_f2fifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_f2fifo.inc                                    ;         ;
+; aglobal180.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc                                  ;         ;
+; db/scfifo_8731.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/scfifo_8731.tdf     ;         ;
+; db/a_dpfifo_fd31.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/a_dpfifo_fd31.tdf   ;         ;
+; db/a_fefifo_4be.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/a_fefifo_4be.tdf    ;         ;
+; db/cntr_rp7.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/cntr_rp7.tdf        ;         ;
+; db/altsyncram_2rm1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/altsyncram_2rm1.tdf ;         ;
+; db/cntr_fpb.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/cntr_fpb.tdf        ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -183,43 +205,94 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 100       ;
+; Estimated Total logic elements              ; 160       ;
 ;                                             ;           ;
-; Total combinational functions               ; 68        ;
+; Total combinational functions               ; 135       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 30        ;
-;     -- 3 input functions                    ; 11        ;
-;     -- <=2 input functions                  ; 27        ;
+;     -- 4 input functions                    ; 51        ;
+;     -- 3 input functions                    ; 28        ;
+;     -- <=2 input functions                  ; 56        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 52        ;
-;     -- arithmetic mode                      ; 16        ;
+;     -- normal mode                          ; 83        ;
+;     -- arithmetic mode                      ; 52        ;
 ;                                             ;           ;
-; Total registers                             ; 66        ;
-;     -- Dedicated logic registers            ; 66        ;
+; Total registers                             ; 105       ;
+;     -- Dedicated logic registers            ; 105       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 4         ;
+; I/O pins                                    ; 5         ;
+; Total memory bits                           ; 65536     ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 66        ;
-; Total fan-out                               ; 481       ;
-; Average fan-out                             ; 3.39      ;
+; Maximum fan-out                             ; 113       ;
+; Total fan-out                               ; 1016      ;
+; Average fan-out                             ; 3.94      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+-------------+--------------+
-; |top                       ; 68 (4)              ; 66 (10)                   ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |top                  ; top         ; work         ;
-;    |uart_rx:uart_rx1|      ; 34 (34)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_rx:uart_rx1 ; uart_rx     ; work         ;
-;    |uart_tx:uart_tx1|      ; 30 (30)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_tx:uart_tx1 ; uart_tx     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                         ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name     ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |top                                     ; 135 (9)             ; 105 (7)                   ; 65536       ; 0            ; 0       ; 0         ; 5    ; 0            ; |top                                                                                                                                 ; top             ; work         ;
+;    |fifo:fifo1|                          ; 54 (0)              ; 41 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1                                                                                                                      ; fifo            ; work         ;
+;       |scfifo:scfifo_component|          ; 54 (0)              ; 41 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component                                                                                              ; scfifo          ; work         ;
+;          |scfifo_8731:auto_generated|    ; 54 (0)              ; 41 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated                                                                   ; scfifo_8731     ; work         ;
+;             |a_dpfifo_fd31:dpfifo|       ; 54 (2)              ; 41 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo                                              ; a_dpfifo_fd31   ; work         ;
+;                |a_fefifo_4be:fifo_state| ; 26 (13)             ; 15 (2)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|a_fefifo_4be:fifo_state                      ; a_fefifo_4be    ; work         ;
+;                   |cntr_rp7:count_usedw| ; 13 (13)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|a_fefifo_4be:fifo_state|cntr_rp7:count_usedw ; cntr_rp7        ; work         ;
+;                |altsyncram_2rm1:FIFOram| ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|altsyncram_2rm1:FIFOram                      ; altsyncram_2rm1 ; work         ;
+;                |cntr_fpb:rd_ptr_count|   ; 13 (13)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|cntr_fpb:rd_ptr_count                        ; cntr_fpb        ; work         ;
+;                |cntr_fpb:wr_ptr|         ; 13 (13)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|cntr_fpb:wr_ptr                              ; cntr_fpb        ; work         ;
+;    |uart_rx:uart_rx1|                    ; 41 (41)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_rx:uart_rx1                                                                                                                ; uart_rx         ; work         ;
+;    |uart_tx:uart_tx1|                    ; 31 (31)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_tx:uart_tx1                                                                                                                ; uart_tx         ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                           ;
++-----------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++-----------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|altsyncram_2rm1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8192         ; 8            ; 8192         ; 8            ; 65536 ; None ;
++-----------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                             ;
++--------+--------------+---------+--------------+--------------+-----------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance ; IP Include File ;
++--------+--------------+---------+--------------+--------------+-----------------+-----------------+
+; Altera ; FIFO         ; 18.0    ; N/A          ; N/A          ; |top|fifo:fifo1 ; module/fifo.v   ;
++--------+--------------+---------+--------------+--------------+-----------------+-----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------+
+; State Machine - |top|flag                     ;
++-----------+-----------+-----------+-----------+
+; Name      ; flag.0000 ; flag.0010 ; flag.0001 ;
++-----------+-----------+-----------+-----------+
+; flag.0000 ; 0         ; 0         ; 0         ;
+; flag.0001 ; 1         ; 0         ; 1         ;
+; flag.0010 ; 1         ; 1         ; 0         ;
++-----------+-----------+-----------+-----------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; flag~9                                ; Lost fanout        ;
+; flag~10                               ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -227,12 +300,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 66    ;
-; Number of registers using Synchronous Clear  ; 10    ;
-; Number of registers using Synchronous Load   ; 9     ;
-; Number of registers using Asynchronous Clear ; 58    ;
+; Total registers                              ; 105   ;
+; Number of registers using Synchronous Clear  ; 9     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 63    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 56    ;
+; Number of registers using Clock Enable       ; 92    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -243,7 +316,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; uart_tx:uart_tx1|tx                    ; 2       ;
-; uart_rx:uart_rx1|flag                  ; 22      ;
+; uart_rx:uart_rx1|flag                  ; 20      ;
 ; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
@@ -253,19 +326,72 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|uart_tx:uart_tx1|flag2[2] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|uart_rx:uart_rx1|cnt[8]   ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|uart_rx:uart_rx1|cnt[7]   ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top|uart_tx:uart_tx1|cnt[8]   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|uart_tx:uart_tx1|flag2[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|uart_rx:uart_rx1|cnt2[0]  ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top|uart_tx:uart_tx1|cnt[1]   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |top|uart_rx:uart_rx1|cnt[2]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|altsyncram_2rm1:FIFOram ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                  ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                   ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo:fifo1|scfifo:scfifo_component ;
++-------------------------+--------------+----------------------------------------+
+; Parameter Name          ; Value        ; Type                                   ;
++-------------------------+--------------+----------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON           ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS    ; OFF          ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS     ; ON           ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS  ; OFF          ; IGNORE_CASCADE                         ;
+; lpm_width               ; 8            ; Signed Integer                         ;
+; LPM_NUMWORDS            ; 8192         ; Signed Integer                         ;
+; LPM_WIDTHU              ; 13           ; Signed Integer                         ;
+; LPM_SHOWAHEAD           ; OFF          ; Untyped                                ;
+; UNDERFLOW_CHECKING      ; ON           ; Untyped                                ;
+; OVERFLOW_CHECKING       ; ON           ; Untyped                                ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF          ; Untyped                                ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF          ; Untyped                                ;
+; ALMOST_FULL_VALUE       ; 0            ; Untyped                                ;
+; ALMOST_EMPTY_VALUE      ; 0            ; Untyped                                ;
+; ENABLE_ECC              ; FALSE        ; Untyped                                ;
+; USE_EAB                 ; ON           ; Untyped                                ;
+; MAXIMIZE_SPEED          ; 5            ; Untyped                                ;
+; DEVICE_FAMILY           ; Cyclone IV E ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED      ; 5            ; Untyped                                ;
+; CBXI_PARAMETER          ; scfifo_8731  ; Untyped                                ;
++-------------------------+--------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; scfifo Parameter Settings by Entity Instance                    ;
++----------------------------+------------------------------------+
+; Name                       ; Value                              ;
++----------------------------+------------------------------------+
+; Number of entity instances ; 1                                  ;
+; Entity Instance            ; fifo:fifo1|scfifo:scfifo_component ;
+;     -- FIFO Type           ; Single Clock                       ;
+;     -- lpm_width           ; 8                                  ;
+;     -- LPM_NUMWORDS        ; 8192                               ;
+;     -- LPM_SHOWAHEAD       ; OFF                                ;
+;     -- USE_EAB             ; ON                                 ;
++----------------------------+------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uart_tx:uart_tx1"                                                                   ;
+; Port Connectivity Checks: "fifo:fifo1"                                                                         ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
-; busy ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; full ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -274,26 +400,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 4                           ;
-; cycloneiii_ff         ; 66                          ;
-;     CLR               ; 9                           ;
-;     CLR SCLR          ; 1                           ;
-;     ENA               ; 8                           ;
-;     ENA CLR           ; 30                          ;
+; boundary_port         ; 5                           ;
+; cycloneiii_ff         ; 105                         ;
+;     CLR               ; 11                          ;
+;     ENA               ; 40                          ;
+;     ENA CLR           ; 43                          ;
 ;     ENA CLR SCLR      ; 9                           ;
-;     ENA CLR SLD       ; 9                           ;
-; cycloneiii_lcell_comb ; 69                          ;
-;     arith             ; 16                          ;
-;         2 data inputs ; 16                          ;
-;     normal            ; 53                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 30                          ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 136                         ;
+;     arith             ; 52                          ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 12                          ;
+;     normal            ; 84                          ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 51                          ;
+; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.16                        ;
+; Average LUT depth     ; 2.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -312,42 +438,78 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 20 03:14:38 2018
+    Info: Processing started: Tue Nov 20 12:47:26 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart -c uart
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file testbench/uart_rx_tb.v
     Info (12023): Found entity 1: uart_rx_tb File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/uart_rx_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file module/uart_tx.v
     Info (12023): Found entity 1: uart_tx File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_tx.v Line: 1
-Warning (10238): Verilog Module Declaration warning at top.v(6): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "top" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file module/top.v
     Info (12023): Found entity 1: top File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench/top_tb.v
     Info (12023): Found entity 1: top_tb File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/top_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file module/uart_rx.v
     Info (12023): Found entity 1: uart_rx File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_rx.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/fifo.v
+    Info (12023): Found entity 1: fifo File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file module/rom.v
+    Info (12023): Found entity 1: rom File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/rom.v Line: 39
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top.v(28): object "clr" assigned a value but never read File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 28
-Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:uart_tx1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 24
-Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:uart_rx1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 35
+Warning (10036): Verilog HDL or VHDL warning at top.v(33): object "clr" assigned a value but never read File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 33
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:uart_tx1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 29
+Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:uart_rx1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 40
+Info (12128): Elaborating entity "fifo" for hierarchy "fifo:fifo1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 52
+Info (12128): Elaborating entity "scfifo" for hierarchy "fifo:fifo1|scfifo:scfifo_component" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/fifo.v Line: 76
+Info (12130): Elaborated megafunction instantiation "fifo:fifo1|scfifo:scfifo_component" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/fifo.v Line: 76
+Info (12133): Instantiated megafunction "fifo:fifo1|scfifo:scfifo_component" with the following parameter: File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/fifo.v Line: 76
+    Info (12134): Parameter "add_ram_output_register" = "OFF"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_numwords" = "8192"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "8"
+    Info (12134): Parameter "lpm_widthu" = "13"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_8731.tdf
+    Info (12023): Found entity 1: scfifo_8731 File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/scfifo_8731.tdf Line: 24
+Info (12128): Elaborating entity "scfifo_8731" for hierarchy "fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/scfifo.tdf Line: 299
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_fd31.tdf
+    Info (12023): Found entity 1: a_dpfifo_fd31 File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/a_dpfifo_fd31.tdf Line: 28
+Info (12128): Elaborating entity "a_dpfifo_fd31" for hierarchy "fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/scfifo_8731.tdf Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_fefifo_4be.tdf
+    Info (12023): Found entity 1: a_fefifo_4be File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/a_fefifo_4be.tdf Line: 24
+Info (12128): Elaborating entity "a_fefifo_4be" for hierarchy "fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|a_fefifo_4be:fifo_state" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/a_dpfifo_fd31.tdf Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_rp7.tdf
+    Info (12023): Found entity 1: cntr_rp7 File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/cntr_rp7.tdf Line: 25
+Info (12128): Elaborating entity "cntr_rp7" for hierarchy "fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|a_fefifo_4be:fifo_state|cntr_rp7:count_usedw" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/a_fefifo_4be.tdf Line: 37
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2rm1.tdf
+    Info (12023): Found entity 1: altsyncram_2rm1 File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/altsyncram_2rm1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_2rm1" for hierarchy "fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|altsyncram_2rm1:FIFOram" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/a_dpfifo_fd31.tdf Line: 41
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_fpb.tdf
+    Info (12023): Found entity 1: cntr_fpb File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/cntr_fpb.tdf Line: 25
+Info (12128): Elaborating entity "cntr_fpb" for hierarchy "fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|cntr_fpb:rd_ptr_count" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/db/a_dpfifo_fd31.tdf Line: 42
 Info (13000): Registers with preset signals will power-up high File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_tx.v Line: 12
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "uart_rx:uart_rx1|last" is converted into an equivalent circuit using register "uart_rx:uart_rx1|last~_emulated" and latch "uart_rx:uart_rx1|last~1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_rx.v Line: 18
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/output_files/uart.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 104 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 174 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 100 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4800 megabytes
-    Info: Processing ended: Tue Nov 20 03:14:47 2018
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 161 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Tue Nov 20 12:47:35 2018
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +------------------------------------------+
