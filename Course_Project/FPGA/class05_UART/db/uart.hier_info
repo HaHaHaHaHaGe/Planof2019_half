@@ -125,6 +125,8 @@ clk => cnt[5].CLK
 clk => cnt[6].CLK
 clk => cnt[7].CLK
 clk => cnt[8].CLK
+clk => rx_2.CLK
+clk => rx_1.CLK
 rst => begin_bit.ACLR
 rst => cnt2[0].ACLR
 rst => cnt2[1].ACLR
@@ -158,6 +160,8 @@ rst => cnt[5].ACLR
 rst => cnt[6].ACLR
 rst => cnt[7].ACLR
 rst => cnt[8].ACLR
+rst => rx_2.PRESET
+rst => rx_1.PRESET
 irq <= irq~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data[0] <= data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data[1] <= data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -167,10 +171,7 @@ data[4] <= data[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data[5] <= data[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data[6] <= data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data[7] <= data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rx => last.DATAA
-rx => outdata.DATAA
-rx => last.ADATA
-rx => always0.IN1
+rx => rx_1.DATAIN
 
 
 |top|fifo:fifo1

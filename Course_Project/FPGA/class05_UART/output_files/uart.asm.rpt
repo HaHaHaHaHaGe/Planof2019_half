@@ -1,5 +1,5 @@
 Assembler report for uart
-Tue Nov 20 12:47:42 2018
+Thu Nov 22 02:21:07 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Nov 20 12:47:42 2018 ;
+; Assembler Status      ; Successful - Thu Nov 22 02:21:07 2018 ;
 ; Revision Name         ; uart                                  ;
 ; Top-level Entity Name ; top                                   ;
 ; Family                ; Cyclone IV E                          ;
@@ -66,8 +66,8 @@ refer to the applicable agreement for further details.
 +----------------+----------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                        ;
 +----------------+----------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x000A331B                                                                                                     ;
-; Checksum       ; 0x000A331B                                                                                                     ;
+; JTAG usercode  ; 0x000A4C9F                                                                                                     ;
+; Checksum       ; 0x000A4C9F                                                                                                     ;
 +----------------+----------------------------------------------------------------------------------------------------------------+
 
 
@@ -77,14 +77,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 20 12:47:42 2018
+    Info: Processing started: Thu Nov 22 02:21:07 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off uart -c uart
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4690 megabytes
-    Info: Processing ended: Tue Nov 20 12:47:43 2018
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4691 megabytes
+    Info: Processing ended: Thu Nov 22 02:21:07 2018
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

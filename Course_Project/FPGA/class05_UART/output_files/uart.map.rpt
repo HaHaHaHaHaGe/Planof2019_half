@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uart
-Tue Nov 20 12:47:35 2018
+Thu Nov 22 02:21:00 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -53,15 +53,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 20 12:47:35 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 22 02:21:00 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; uart                                        ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 160                                         ;
-;     Total combinational functions  ; 135                                         ;
-;     Dedicated logic registers      ; 105                                         ;
-; Total registers                    ; 105                                         ;
+; Total logic elements               ; 162                                         ;
+;     Total combinational functions  ; 137                                         ;
+;     Dedicated logic registers      ; 107                                         ;
+; Total registers                    ; 107                                         ;
 ; Total pins                         ; 5                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 65,536                                      ;
@@ -205,20 +205,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 160       ;
+; Estimated Total logic elements              ; 162       ;
 ;                                             ;           ;
-; Total combinational functions               ; 135       ;
+; Total combinational functions               ; 137       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 51        ;
 ;     -- 3 input functions                    ; 28        ;
-;     -- <=2 input functions                  ; 56        ;
+;     -- <=2 input functions                  ; 58        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 83        ;
+;     -- normal mode                          ; 85        ;
 ;     -- arithmetic mode                      ; 52        ;
 ;                                             ;           ;
-; Total registers                             ; 105       ;
-;     -- Dedicated logic registers            ; 105       ;
+; Total registers                             ; 107       ;
+;     -- Dedicated logic registers            ; 107       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 5         ;
@@ -227,9 +227,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 113       ;
-; Total fan-out                               ; 1016      ;
-; Average fan-out                             ; 3.94      ;
+; Maximum fan-out                             ; 115       ;
+; Total fan-out                               ; 1024      ;
+; Average fan-out                             ; 3.91      ;
 +---------------------------------------------+-----------+
 
 
@@ -238,7 +238,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name     ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top                                     ; 135 (9)             ; 105 (7)                   ; 65536       ; 0            ; 0       ; 0         ; 5    ; 0            ; |top                                                                                                                                 ; top             ; work         ;
+; |top                                     ; 137 (9)             ; 107 (7)                   ; 65536       ; 0            ; 0       ; 0         ; 5    ; 0            ; |top                                                                                                                                 ; top             ; work         ;
 ;    |fifo:fifo1|                          ; 54 (0)              ; 41 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1                                                                                                                      ; fifo            ; work         ;
 ;       |scfifo:scfifo_component|          ; 54 (0)              ; 41 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component                                                                                              ; scfifo          ; work         ;
 ;          |scfifo_8731:auto_generated|    ; 54 (0)              ; 41 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated                                                                   ; scfifo_8731     ; work         ;
@@ -248,7 +248,7 @@ refer to the applicable agreement for further details.
 ;                |altsyncram_2rm1:FIFOram| ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|altsyncram_2rm1:FIFOram                      ; altsyncram_2rm1 ; work         ;
 ;                |cntr_fpb:rd_ptr_count|   ; 13 (13)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|cntr_fpb:rd_ptr_count                        ; cntr_fpb        ; work         ;
 ;                |cntr_fpb:wr_ptr|         ; 13 (13)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated|a_dpfifo_fd31:dpfifo|cntr_fpb:wr_ptr                              ; cntr_fpb        ; work         ;
-;    |uart_rx:uart_rx1|                    ; 41 (41)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_rx:uart_rx1                                                                                                                ; uart_rx         ; work         ;
+;    |uart_rx:uart_rx1|                    ; 43 (43)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_rx:uart_rx1                                                                                                                ; uart_rx         ; work         ;
 ;    |uart_tx:uart_tx1|                    ; 31 (31)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_tx:uart_tx1                                                                                                                ; uart_tx         ; work         ;
 +------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -300,10 +300,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 105   ;
+; Total registers                              ; 107   ;
 ; Number of registers using Synchronous Clear  ; 9     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 63    ;
+; Number of registers using Asynchronous Clear ; 65    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 92    ;
 ; Number of registers using Preset             ; 0     ;
@@ -317,7 +317,9 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; uart_tx:uart_tx1|tx                    ; 2       ;
 ; uart_rx:uart_rx1|flag                  ; 20      ;
-; Total number of inverted registers = 2 ;         ;
+; uart_rx:uart_rx1|rx_2                  ; 6       ;
+; uart_rx:uart_rx1|rx_1                  ; 1       ;
+; Total number of inverted registers = 4 ;         ;
 +----------------------------------------+---------+
 
 
@@ -401,25 +403,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 5                           ;
-; cycloneiii_ff         ; 105                         ;
-;     CLR               ; 11                          ;
+; cycloneiii_ff         ; 107                         ;
+;     CLR               ; 13                          ;
 ;     ENA               ; 40                          ;
 ;     ENA CLR           ; 43                          ;
 ;     ENA CLR SCLR      ; 9                           ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 136                         ;
+; cycloneiii_lcell_comb ; 138                         ;
 ;     arith             ; 52                          ;
 ;         2 data inputs ; 40                          ;
 ;         3 data inputs ; 12                          ;
-;     normal            ; 84                          ;
-;         1 data inputs ; 6                           ;
+;     normal            ; 86                          ;
+;         1 data inputs ; 8                           ;
 ;         2 data inputs ; 11                          ;
 ;         3 data inputs ; 16                          ;
 ;         4 data inputs ; 51                          ;
 ; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.31                        ;
+; Average LUT depth     ; 2.29                        ;
 +-----------------------+-----------------------------+
 
 
@@ -438,7 +440,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 20 12:47:26 2018
+    Info: Processing started: Thu Nov 22 02:20:50 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart -c uart
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file testbench/uart_rx_tb.v
@@ -500,16 +502,16 @@ Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/output_files/uart.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 174 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 176 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 161 logic cells
+    Info (21061): Implemented 163 logic cells
     Info (21064): Implemented 8 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4811 megabytes
-    Info: Processing ended: Tue Nov 20 12:47:35 2018
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Processing ended: Thu Nov 22 02:21:00 2018
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+
