@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uart
-Thu Nov 22 02:21:00 2018
+Thu Nov 22 14:26:11 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -53,16 +53,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 22 02:21:00 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 22 14:26:11 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; uart                                        ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 162                                         ;
-;     Total combinational functions  ; 137                                         ;
-;     Dedicated logic registers      ; 107                                         ;
-; Total registers                    ; 107                                         ;
-; Total pins                         ; 5                                           ;
+; Total logic elements               ; 161                                         ;
+;     Total combinational functions  ; 135                                         ;
+;     Dedicated logic registers      ; 108                                         ;
+; Total registers                    ; 108                                         ;
+; Total pins                         ; 4                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 65,536                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -205,31 +205,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 162       ;
+; Estimated Total logic elements              ; 161       ;
 ;                                             ;           ;
-; Total combinational functions               ; 137       ;
+; Total combinational functions               ; 135       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 51        ;
-;     -- 3 input functions                    ; 28        ;
-;     -- <=2 input functions                  ; 58        ;
+;     -- 4 input functions                    ; 49        ;
+;     -- 3 input functions                    ; 27        ;
+;     -- <=2 input functions                  ; 59        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 85        ;
+;     -- normal mode                          ; 83        ;
 ;     -- arithmetic mode                      ; 52        ;
 ;                                             ;           ;
-; Total registers                             ; 107       ;
-;     -- Dedicated logic registers            ; 107       ;
+; Total registers                             ; 108       ;
+;     -- Dedicated logic registers            ; 108       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 5         ;
+; I/O pins                                    ; 4         ;
 ; Total memory bits                           ; 65536     ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 115       ;
-; Total fan-out                               ; 1024      ;
-; Average fan-out                             ; 3.91      ;
+; Maximum fan-out                             ; 116       ;
+; Total fan-out                               ; 1016      ;
+; Average fan-out                             ; 3.92      ;
 +---------------------------------------------+-----------+
 
 
@@ -238,7 +238,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name     ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top                                     ; 137 (9)             ; 107 (7)                   ; 65536       ; 0            ; 0       ; 0         ; 5    ; 0            ; |top                                                                                                                                 ; top             ; work         ;
+; |top                                     ; 135 (7)             ; 108 (8)                   ; 65536       ; 0            ; 0       ; 0         ; 4    ; 0            ; |top                                                                                                                                 ; top             ; work         ;
 ;    |fifo:fifo1|                          ; 54 (0)              ; 41 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1                                                                                                                      ; fifo            ; work         ;
 ;       |scfifo:scfifo_component|          ; 54 (0)              ; 41 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component                                                                                              ; scfifo          ; work         ;
 ;          |scfifo_8731:auto_generated|    ; 54 (0)              ; 41 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_8731:auto_generated                                                                   ; scfifo_8731     ; work         ;
@@ -273,15 +273,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------+
-; State Machine - |top|flag                     ;
-+-----------+-----------+-----------+-----------+
-; Name      ; flag.0000 ; flag.0010 ; flag.0001 ;
-+-----------+-----------+-----------+-----------+
-; flag.0000 ; 0         ; 0         ; 0         ;
-; flag.0001 ; 1         ; 0         ; 1         ;
-; flag.0010 ; 1         ; 1         ; 0         ;
-+-----------+-----------+-----------+-----------+
++-----------------------------------------------------------+
+; State Machine - |top|flag                                 ;
++-----------+-----------+-----------+-----------+-----------+
+; Name      ; flag.0011 ; flag.0010 ; flag.0001 ; flag.0000 ;
++-----------+-----------+-----------+-----------+-----------+
+; flag.0000 ; 0         ; 0         ; 0         ; 0         ;
+; flag.0001 ; 0         ; 0         ; 1         ; 1         ;
+; flag.0010 ; 0         ; 1         ; 0         ; 1         ;
+; flag.0011 ; 1         ; 0         ; 0         ; 1         ;
++-----------+-----------+-----------+-----------+-----------+
 
 
 +------------------------------------------------------------+
@@ -289,9 +290,11 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
+; flag~8                                ; Lost fanout        ;
 ; flag~9                                ; Lost fanout        ;
 ; flag~10                               ; Lost fanout        ;
-; Total Number of Removed Registers = 2 ;                    ;
+; flag~11                               ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
 +---------------------------------------+--------------------+
 
 
@@ -300,12 +303,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 107   ;
+; Total registers                              ; 108   ;
 ; Number of registers using Synchronous Clear  ; 9     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 65    ;
+; Number of registers using Asynchronous Clear ; 67    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 92    ;
+; Number of registers using Clock Enable       ; 91    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -328,10 +331,10 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|uart_tx:uart_tx1|flag2[3] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|uart_rx:uart_rx1|cnt2[0]  ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top|uart_tx:uart_tx1|cnt[1]   ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |top|uart_rx:uart_rx1|cnt[2]   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|uart_tx:uart_tx1|flag2[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|uart_rx:uart_rx1|cnt2[1]  ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top|uart_tx:uart_tx1|cnt[7]   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |top|uart_rx:uart_rx1|cnt[8]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 
 
@@ -402,26 +405,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 5                           ;
-; cycloneiii_ff         ; 107                         ;
-;     CLR               ; 13                          ;
-;     ENA               ; 40                          ;
+; boundary_port         ; 4                           ;
+; cycloneiii_ff         ; 108                         ;
+;     CLR               ; 15                          ;
+;     ENA               ; 39                          ;
 ;     ENA CLR           ; 43                          ;
 ;     ENA CLR SCLR      ; 9                           ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 138                         ;
+; cycloneiii_lcell_comb ; 136                         ;
 ;     arith             ; 52                          ;
 ;         2 data inputs ; 40                          ;
 ;         3 data inputs ; 12                          ;
-;     normal            ; 86                          ;
+;     normal            ; 84                          ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 16                          ;
-;         4 data inputs ; 51                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 49                          ;
 ; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.29                        ;
+; Average LUT depth     ; 2.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -440,13 +443,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 22 02:20:50 2018
+    Info: Processing started: Thu Nov 22 14:26:02 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart -c uart
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file testbench/uart_rx_tb.v
     Info (12023): Found entity 1: uart_rx_tb File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/testbench/uart_rx_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file module/uart_tx.v
     Info (12023): Found entity 1: uart_tx File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_tx.v Line: 1
+Warning (10238): Verilog Module Declaration warning at top.v(6): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "top" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file module/top.v
     Info (12023): Found entity 1: top File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench/top_tb.v
@@ -458,10 +462,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file module/
 Info (12021): Found 1 design units, including 1 entities, in source file module/rom.v
     Info (12023): Found entity 1: rom File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/rom.v Line: 39
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top.v(33): object "clr" assigned a value but never read File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 33
-Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:uart_tx1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 29
-Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:uart_rx1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 40
-Info (12128): Elaborating entity "fifo" for hierarchy "fifo:fifo1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 52
+Warning (10036): Verilog HDL or VHDL warning at top.v(30): object "clr" assigned a value but never read File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 30
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:uart_tx1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 26
+Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:uart_rx1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 37
+Info (12128): Elaborating entity "fifo" for hierarchy "fifo:fifo1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/top.v Line: 49
 Info (12128): Elaborating entity "scfifo" for hierarchy "fifo:fifo1|scfifo:scfifo_component" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/fifo.v Line: 76
 Info (12130): Elaborated megafunction instantiation "fifo:fifo1|scfifo:scfifo_component" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/fifo.v Line: 76
 Info (12133): Instantiated megafunction "fifo:fifo1|scfifo:scfifo_component" with the following parameter: File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/fifo.v Line: 76
@@ -498,19 +502,19 @@ Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal 
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "uart_rx:uart_rx1|last" is converted into an equivalent circuit using register "uart_rx:uart_rx1|last~_emulated" and latch "uart_rx:uart_rx1|last~1" File: C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/module/uart_rx.v Line: 18
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/82312/Desktop/GitTEST/Planof2019_half/Course_Project/FPGA/class05_UART/output_files/uart.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 176 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 173 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 163 logic cells
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 161 logic cells
     Info (21064): Implemented 8 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4811 megabytes
-    Info: Processing ended: Thu Nov 22 02:21:00 2018
-    Info: Elapsed time: 00:00:10
+    Info: Processing ended: Thu Nov 22 14:26:11 2018
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:20
 
 

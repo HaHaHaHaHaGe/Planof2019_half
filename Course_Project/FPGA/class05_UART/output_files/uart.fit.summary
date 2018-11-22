@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Nov 22 02:21:05 2018
+Fitter Status : Successful - Thu Nov 22 14:26:17 2018
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : uart
 Top-level Entity Name : top
 Family : Cyclone IV E
 Device : EP4CE10F17C8
 Timing Models : Final
-Total logic elements : 149 / 10,320 ( 1 % )
-    Total combinational functions : 137 / 10,320 ( 1 % )
-    Dedicated logic registers : 99 / 10,320 ( < 1 % )
-Total registers : 99
-Total pins : 5 / 180 ( 3 % )
+Total logic elements : 148 / 10,320 ( 1 % )
+    Total combinational functions : 135 / 10,320 ( 1 % )
+    Dedicated logic registers : 100 / 10,320 ( < 1 % )
+Total registers : 100
+Total pins : 4 / 180 ( 2 % )
 Total virtual pins : 0
 Total memory bits : 65,536 / 423,936 ( 15 % )
 Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )

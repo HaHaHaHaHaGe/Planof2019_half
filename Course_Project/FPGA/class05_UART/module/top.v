@@ -3,20 +3,17 @@ module top(
 	rst,
 	tx,
 	rx,
-	led
 );
 
 input clk,rst,rx;
-output tx,led;
-
-reg led;
+output tx;
 reg start;
 wire busy;
 
 wire [7:0]data;
 
 reg rdreq;
-wire wrreq;
+reg wrreq;
 wire empty,full;
 wire [7:0]qout;
 uart_tx uart_tx1(
@@ -55,16 +52,17 @@ fifo fifo1 (
 reg [3:0]flag;
 reg irq2;
 
-
-always@(posedge clk,negedge rst)begin
-	if(!rst) 
-		led <=0;
-	else begin
-	irq2 <= irq;
-	if(irq2 == 1 && data != 8'd48)
-		led <=1;
-	end
-end	
+reg flag2;
+always@(posedge clk,negedge rst)
+if(!rst) begin
+	wrreq <= 0;
+	flag2 <= 0;
+end
+else case(flag2)
+	0: if(irq) begin flag2 <= 1; wrreq <= 1; end else flag2 <= 0;
+	1:begin wrreq <= 0; if(irq == 0) flag2 <= 0; end
+endcase
+	
 	
 always@(posedge clk,negedge rst)
 if(!rst) begin
@@ -75,28 +73,12 @@ if(!rst) begin
 end
 else 
 case(flag)
-0:
-if(!empty) begin
-	flag <= 1;
-	rdreq <= 1;
-end	
-else begin
-	rdreq <= 0;
-	start <= 0;
-end	
-	
-	
-1: 
-if(!busy) begin
-	start <= 1;
-	flag <= 2;
-	rdreq <= 0;
-end
-2: begin
-start <= 0;
-flag <= 0;
-end
-
+		0: if(empty == 0) begin rdreq <= 1; flag <= 1; end else flag <= 0;
+		1: begin rdreq <= 0; flag <= 2; start <= 1; end
+		2: begin start <= 0; flag <= 3; end 
+		3: if(busy == 0) flag <= 0;
 endcase
-assign wrreq = irq2;
+	
+
+
 endmodule

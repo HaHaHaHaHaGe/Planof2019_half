@@ -1,9 +1,8 @@
 |top
 clk => clk.IN3
 rst => rst.IN2
-tx << uart_tx:uart_tx1.tx
+tx <= uart_tx:uart_tx1.tx
 rx => rx.IN1
-led << led~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|uart_tx:uart_tx1
