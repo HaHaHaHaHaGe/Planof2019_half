@@ -1,0 +1,13 @@
+module keyboard(
+	clk,
+	rst,
+	keyout,
+	line_in,
+	line_out,
+);
+input clk,rst;
+input [3:0]line_in;
+
+output reg [3:0]keyboard;
+output reg [3:0]line_out;
+endmodule

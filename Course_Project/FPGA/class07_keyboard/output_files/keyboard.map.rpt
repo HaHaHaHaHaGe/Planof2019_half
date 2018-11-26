@@ -1,0 +1,595 @@
+Analysis & Synthesis report for keyboard
+Mon Nov 26 17:24:20 2018
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |top|flag
+ 11. State Machine - |top|flag2
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo|altsyncram_2qm1:FIFOram
+ 17. Parameter Settings for User Entity Instance: fifo:fifo1|scfifo:scfifo_component
+ 18. scfifo Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "fifo:fifo1"
+ 20. Port Connectivity Checks: "uart_rx:uart_rx1"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Nov 26 17:24:20 2018       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; keyboard                                    ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 679                                         ;
+;     Total combinational functions  ; 627                                         ;
+;     Dedicated logic registers      ; 488                                         ;
+; Total registers                    ; 488                                         ;
+; Total pins                         ; 12                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 8,192                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; top                ; keyboard           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; module/pushkey.v                 ; yes             ; User Verilog HDL File        ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/pushkey.v       ;         ;
+; module/uart_tx.v                 ; yes             ; User Verilog HDL File        ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/uart_tx.v       ;         ;
+; module/uart_rx.v                 ; yes             ; User Verilog HDL File        ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/uart_rx.v       ;         ;
+; module/top.v                     ; yes             ; User Verilog HDL File        ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/top.v           ;         ;
+; module/keyboard.v                ; yes             ; User Verilog HDL File        ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/keyboard.v      ;         ;
+; module/fifo.v                    ; yes             ; User Wizard-Generated File   ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/fifo.v          ;         ;
+; scfifo.tdf                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/scfifo.tdf                                                      ;         ;
+; a_regfifo.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_regfifo.inc                                                   ;         ;
+; a_dpfifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_dpfifo.inc                                                    ;         ;
+; a_i2fifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_i2fifo.inc                                                    ;         ;
+; a_fffifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_fffifo.inc                                                    ;         ;
+; a_f2fifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_f2fifo.inc                                                    ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                  ;         ;
+; db/scfifo_o631.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/scfifo_o631.tdf     ;         ;
+; db/a_dpfifo_vc31.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/a_dpfifo_vc31.tdf   ;         ;
+; db/a_fefifo_kae.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/a_fefifo_kae.tdf    ;         ;
+; db/cntr_op7.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/cntr_op7.tdf        ;         ;
+; db/altsyncram_2qm1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/altsyncram_2qm1.tdf ;         ;
+; db/cntr_cpb.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/cntr_cpb.tdf        ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 679       ;
+;                                             ;           ;
+; Total combinational functions               ; 627       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 162       ;
+;     -- 3 input functions                    ; 69        ;
+;     -- <=2 input functions                  ; 396       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 272       ;
+;     -- arithmetic mode                      ; 355       ;
+;                                             ;           ;
+; Total registers                             ; 488       ;
+;     -- Dedicated logic registers            ; 488       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 12        ;
+; Total memory bits                           ; 8192      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 496       ;
+; Total fan-out                               ; 3657      ;
+; Average fan-out                             ; 3.19      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                         ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name     ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |top                                     ; 627 (29)            ; 488 (36)                  ; 8192        ; 0            ; 0       ; 0         ; 12   ; 0            ; |top                                                                                                                                 ; top             ; work         ;
+;    |fifo:fifo1|                          ; 43 (0)              ; 32 (0)                    ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1                                                                                                                      ; fifo            ; work         ;
+;       |scfifo:scfifo_component|          ; 43 (0)              ; 32 (0)                    ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component                                                                                              ; scfifo          ; work         ;
+;          |scfifo_o631:auto_generated|    ; 43 (0)              ; 32 (0)                    ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated                                                                   ; scfifo_o631     ; work         ;
+;             |a_dpfifo_vc31:dpfifo|       ; 43 (2)              ; 32 (0)                    ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo                                              ; a_dpfifo_vc31   ; work         ;
+;                |a_fefifo_kae:fifo_state| ; 21 (11)             ; 12 (2)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo|a_fefifo_kae:fifo_state                      ; a_fefifo_kae    ; work         ;
+;                   |cntr_op7:count_usedw| ; 10 (10)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo|a_fefifo_kae:fifo_state|cntr_op7:count_usedw ; cntr_op7        ; work         ;
+;                |altsyncram_2qm1:FIFOram| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo|altsyncram_2qm1:FIFOram                      ; altsyncram_2qm1 ; work         ;
+;                |cntr_cpb:rd_ptr_count|   ; 10 (10)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo|cntr_cpb:rd_ptr_count                        ; cntr_cpb        ; work         ;
+;                |cntr_cpb:wr_ptr|         ; 10 (10)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo|cntr_cpb:wr_ptr                              ; cntr_cpb        ; work         ;
+;    |keyboard:keyboard1|                  ; 524 (8)             ; 396 (28)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1                                                                                                              ; keyboard        ; work         ;
+;       |pushkey:pushkey10|                ; 32 (32)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey10                                                                                            ; pushkey         ; work         ;
+;       |pushkey:pushkey11|                ; 32 (32)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey11                                                                                            ; pushkey         ; work         ;
+;       |pushkey:pushkey12|                ; 33 (33)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey12                                                                                            ; pushkey         ; work         ;
+;       |pushkey:pushkey13|                ; 32 (32)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey13                                                                                            ; pushkey         ; work         ;
+;       |pushkey:pushkey14|                ; 32 (32)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey14                                                                                            ; pushkey         ; work         ;
+;       |pushkey:pushkey15|                ; 33 (33)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey15                                                                                            ; pushkey         ; work         ;
+;       |pushkey:pushkey16|                ; 32 (32)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey16                                                                                            ; pushkey         ; work         ;
+;       |pushkey:pushkey1|                 ; 32 (32)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey1                                                                                             ; pushkey         ; work         ;
+;       |pushkey:pushkey2|                 ; 32 (32)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey2                                                                                             ; pushkey         ; work         ;
+;       |pushkey:pushkey3|                 ; 33 (33)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey3                                                                                             ; pushkey         ; work         ;
+;       |pushkey:pushkey4|                 ; 32 (32)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey4                                                                                             ; pushkey         ; work         ;
+;       |pushkey:pushkey5|                 ; 32 (32)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey5                                                                                             ; pushkey         ; work         ;
+;       |pushkey:pushkey6|                 ; 32 (32)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey6                                                                                             ; pushkey         ; work         ;
+;       |pushkey:pushkey7|                 ; 33 (33)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey7                                                                                             ; pushkey         ; work         ;
+;       |pushkey:pushkey8|                 ; 32 (32)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey8                                                                                             ; pushkey         ; work         ;
+;       |pushkey:pushkey9|                 ; 32 (32)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|keyboard:keyboard1|pushkey:pushkey9                                                                                             ; pushkey         ; work         ;
+;    |uart_tx:uart_tx1|                    ; 31 (31)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_tx:uart_tx1                                                                                                                ; uart_tx         ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                          ;
++-----------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-----------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo|altsyncram_2qm1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1024         ; 8            ; 1024         ; 8            ; 8192 ; None ;
++-----------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                             ;
++--------+--------------+---------+--------------+--------------+-----------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance ; IP Include File ;
++--------+--------------+---------+--------------+--------------+-----------------+-----------------+
+; Altera ; FIFO         ; 18.1    ; N/A          ; N/A          ; |top|fifo:fifo1 ; module/fifo.v   ;
++--------+--------------+---------+--------------+--------------+-----------------+-----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |top|flag                                 ;
++-----------+-----------+-----------+-----------+-----------+
+; Name      ; flag.0011 ; flag.0010 ; flag.0001 ; flag.0000 ;
++-----------+-----------+-----------+-----------+-----------+
+; flag.0000 ; 0         ; 0         ; 0         ; 0         ;
+; flag.0001 ; 0         ; 0         ; 1         ; 1         ;
+; flag.0010 ; 0         ; 1         ; 0         ; 1         ;
+; flag.0011 ; 1         ; 0         ; 0         ; 1         ;
++-----------+-----------+-----------+-----------+-----------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------+
+; State Machine - |top|flag2                                            ;
++-----------+-----------+-----------+-----------+-----------+-----------+
+; Name      ; flag2.011 ; flag2.010 ; flag2.001 ; flag2.000 ; flag2.100 ;
++-----------+-----------+-----------+-----------+-----------+-----------+
+; flag2.000 ; 0         ; 0         ; 0         ; 0         ; 0         ;
+; flag2.001 ; 0         ; 0         ; 1         ; 1         ; 0         ;
+; flag2.010 ; 0         ; 1         ; 0         ; 1         ; 0         ;
+; flag2.011 ; 1         ; 0         ; 0         ; 1         ; 0         ;
+; flag2.100 ; 0         ; 0         ; 0         ; 1         ; 1         ;
++-----------+-----------+-----------+-----------+-----------+-----------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; flag~8                                ; Lost fanout        ;
+; flag~9                                ; Lost fanout        ;
+; flag~10                               ; Lost fanout        ;
+; flag~11                               ; Lost fanout        ;
+; flag2~9                               ; Lost fanout        ;
+; flag2~10                              ; Lost fanout        ;
+; Total Number of Removed Registers = 6 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 488   ;
+; Number of registers using Synchronous Clear  ; 345   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 88    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 428   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; uart_tx:uart_tx1|tx                    ; 2       ;
+; keyboard:keyboard1|line_out[1]         ; 9       ;
+; keyboard:keyboard1|line_out[2]         ; 9       ;
+; keyboard:keyboard1|line_out[3]         ; 9       ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|uart_tx:uart_tx1|flag2[2]                    ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey16|cnt[18] ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey15|cnt[19] ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey14|cnt[3]  ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey13|cnt[19] ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey12|cnt[3]  ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey11|cnt[20] ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey10|cnt[10] ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey9|cnt[19]  ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey8|cnt[2]   ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey7|cnt[19]  ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey6|cnt[0]   ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey5|cnt[19]  ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey4|cnt[5]   ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey3|cnt[10]  ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey2|cnt[15]  ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top|keyboard:keyboard1|pushkey:pushkey1|cnt[16]  ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top|uart_tx:uart_tx1|cnt[0]                      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|data[6]                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo|altsyncram_2qm1:FIFOram ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                  ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                   ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo:fifo1|scfifo:scfifo_component ;
++-------------------------+--------------+----------------------------------------+
+; Parameter Name          ; Value        ; Type                                   ;
++-------------------------+--------------+----------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON           ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS    ; OFF          ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS     ; ON           ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS  ; OFF          ; IGNORE_CASCADE                         ;
+; lpm_width               ; 8            ; Signed Integer                         ;
+; LPM_NUMWORDS            ; 1024         ; Signed Integer                         ;
+; LPM_WIDTHU              ; 10           ; Signed Integer                         ;
+; LPM_SHOWAHEAD           ; OFF          ; Untyped                                ;
+; UNDERFLOW_CHECKING      ; ON           ; Untyped                                ;
+; OVERFLOW_CHECKING       ; ON           ; Untyped                                ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF          ; Untyped                                ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF          ; Untyped                                ;
+; ALMOST_FULL_VALUE       ; 0            ; Untyped                                ;
+; ALMOST_EMPTY_VALUE      ; 0            ; Untyped                                ;
+; ENABLE_ECC              ; FALSE        ; Untyped                                ;
+; USE_EAB                 ; ON           ; Untyped                                ;
+; MAXIMIZE_SPEED          ; 5            ; Untyped                                ;
+; DEVICE_FAMILY           ; Cyclone IV E ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED      ; 5            ; Untyped                                ;
+; CBXI_PARAMETER          ; scfifo_o631  ; Untyped                                ;
++-------------------------+--------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; scfifo Parameter Settings by Entity Instance                    ;
++----------------------------+------------------------------------+
+; Name                       ; Value                              ;
++----------------------------+------------------------------------+
+; Number of entity instances ; 1                                  ;
+; Entity Instance            ; fifo:fifo1|scfifo:scfifo_component ;
+;     -- FIFO Type           ; Single Clock                       ;
+;     -- lpm_width           ; 8                                  ;
+;     -- LPM_NUMWORDS        ; 1024                               ;
+;     -- LPM_SHOWAHEAD       ; OFF                                ;
+;     -- USE_EAB             ; ON                                 ;
++----------------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fifo:fifo1"                                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; full ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart_rx:uart_rx1"                                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; irq  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 12                          ;
+; cycloneiii_ff         ; 488                         ;
+;     CLR               ; 26                          ;
+;     ENA               ; 30                          ;
+;     ENA CLR           ; 53                          ;
+;     ENA CLR SCLR      ; 9                           ;
+;     ENA SCLR          ; 336                         ;
+;     plain             ; 34                          ;
+; cycloneiii_lcell_comb ; 631                         ;
+;     arith             ; 355                         ;
+;         2 data inputs ; 346                         ;
+;         3 data inputs ; 9                           ;
+;     normal            ; 276                         ;
+;         1 data inputs ; 40                          ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 60                          ;
+;         4 data inputs ; 162                         ;
+; cycloneiii_ram_block  ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.77                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon Nov 26 17:24:06 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off keyboard -c keyboard
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file module/pushkey.v
+    Info (12023): Found entity 1: pushkey File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/pushkey.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/uart_tx.v
+    Info (12023): Found entity 1: uart_tx File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/uart_tx.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/uart_rx.v
+    Info (12023): Found entity 1: uart_rx File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/uart_rx.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at top.v(64): ignored dangling comma in List of Port Connections File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/top.v Line: 64
+Info (12021): Found 1 design units, including 1 entities, in source file module/top.v
+    Info (12023): Found entity 1: top File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/top.v Line: 1
+Warning (10238): Verilog Module Declaration warning at keyboard.v(7): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "keyboard" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/keyboard.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file module/keyboard.v
+    Info (12023): Found entity 1: keyboard File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/keyboard.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/fifo.v
+    Info (12023): Found entity 1: fifo File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/fifo.v Line: 39
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at top.v(34): object "clr" assigned a value but never read File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/top.v Line: 34
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:uart_tx1" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/top.v Line: 30
+Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:uart_rx1" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/top.v Line: 41
+Info (12128): Elaborating entity "fifo" for hierarchy "fifo:fifo1" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/top.v Line: 53
+Info (12128): Elaborating entity "scfifo" for hierarchy "fifo:fifo1|scfifo:scfifo_component" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/fifo.v Line: 76
+Info (12130): Elaborated megafunction instantiation "fifo:fifo1|scfifo:scfifo_component" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/fifo.v Line: 76
+Info (12133): Instantiated megafunction "fifo:fifo1|scfifo:scfifo_component" with the following parameter: File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/fifo.v Line: 76
+    Info (12134): Parameter "add_ram_output_register" = "OFF"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_numwords" = "1024"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "8"
+    Info (12134): Parameter "lpm_widthu" = "10"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_o631.tdf
+    Info (12023): Found entity 1: scfifo_o631 File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/scfifo_o631.tdf Line: 24
+Info (12128): Elaborating entity "scfifo_o631" for hierarchy "fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/scfifo.tdf Line: 299
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_vc31.tdf
+    Info (12023): Found entity 1: a_dpfifo_vc31 File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/a_dpfifo_vc31.tdf Line: 28
+Info (12128): Elaborating entity "a_dpfifo_vc31" for hierarchy "fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/scfifo_o631.tdf Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_fefifo_kae.tdf
+    Info (12023): Found entity 1: a_fefifo_kae File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/a_fefifo_kae.tdf Line: 24
+Info (12128): Elaborating entity "a_fefifo_kae" for hierarchy "fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo|a_fefifo_kae:fifo_state" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/a_dpfifo_vc31.tdf Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_op7.tdf
+    Info (12023): Found entity 1: cntr_op7 File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/cntr_op7.tdf Line: 25
+Info (12128): Elaborating entity "cntr_op7" for hierarchy "fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo|a_fefifo_kae:fifo_state|cntr_op7:count_usedw" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/a_fefifo_kae.tdf Line: 37
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2qm1.tdf
+    Info (12023): Found entity 1: altsyncram_2qm1 File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/altsyncram_2qm1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_2qm1" for hierarchy "fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo|altsyncram_2qm1:FIFOram" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/a_dpfifo_vc31.tdf Line: 41
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_cpb.tdf
+    Info (12023): Found entity 1: cntr_cpb File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/cntr_cpb.tdf Line: 25
+Info (12128): Elaborating entity "cntr_cpb" for hierarchy "fifo:fifo1|scfifo:scfifo_component|scfifo_o631:auto_generated|a_dpfifo_vc31:dpfifo|cntr_cpb:rd_ptr_count" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/db/a_dpfifo_vc31.tdf Line: 42
+Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:keyboard1" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/top.v Line: 64
+Info (12128): Elaborating entity "pushkey" for hierarchy "keyboard:keyboard1|pushkey:pushkey1" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/keyboard.v Line: 28
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/uart_tx.v Line: 12
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/output_files/keyboard.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "rx" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/module/top.v Line: 10
+Info (21057): Implemented 699 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 679 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Mon Nov 26 17:24:20 2018
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:30
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class07_keyboard/output_files/keyboard.map.smsg.
+
+

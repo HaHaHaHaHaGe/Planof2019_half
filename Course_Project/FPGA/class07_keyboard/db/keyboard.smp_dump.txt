@@ -1,0 +1,15 @@
+
+State Machine - |top|flag
+Name flag.0011 flag.0010 flag.0001 flag.0000 
+flag.0000 0 0 0 0 
+flag.0001 0 0 1 1 
+flag.0010 0 1 0 1 
+flag.0011 1 0 0 1 
+
+State Machine - |top|flag2
+Name flag2.011 flag2.010 flag2.001 flag2.000 flag2.100 
+flag2.000 0 0 0 0 0 
+flag2.001 0 0 1 1 0 
+flag2.010 0 1 0 1 0 
+flag2.011 1 0 0 1 0 
+flag2.100 0 0 0 1 1 
