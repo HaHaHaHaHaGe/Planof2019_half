@@ -1,0 +1,28 @@
+--cpu Cortex-M7.fp.dp
+"rng\startup_stm32h743xx.o"
+"rng\main.o"
+"rng\stm32h7xx_it.o"
+"rng\stm32h7xx_hal_msp.o"
+"rng\stm32h7xx_hal_cortex.o"
+"rng\stm32h7xx_hal_rng.o"
+"rng\stm32h7xx_hal_tim.o"
+"rng\stm32h7xx_hal_tim_ex.o"
+"rng\stm32h7xx_hal_rcc.o"
+"rng\stm32h7xx_hal_rcc_ex.o"
+"rng\stm32h7xx_hal_flash.o"
+"rng\stm32h7xx_hal_flash_ex.o"
+"rng\stm32h7xx_hal_gpio.o"
+"rng\stm32h7xx_hal_hsem.o"
+"rng\stm32h7xx_hal_dma.o"
+"rng\stm32h7xx_hal_dma_ex.o"
+"rng\stm32h7xx_hal_mdma.o"
+"rng\stm32h7xx_hal_pwr.o"
+"rng\stm32h7xx_hal_pwr_ex.o"
+"rng\stm32h7xx_hal.o"
+"rng\stm32h7xx_hal_i2c.o"
+"rng\stm32h7xx_hal_i2c_ex.o"
+"rng\system_stm32h7xx.o"
+--library_type=microlib --strict --scatter "RNG\RNG.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "RNG.map" -o RNG\RNG.axf
