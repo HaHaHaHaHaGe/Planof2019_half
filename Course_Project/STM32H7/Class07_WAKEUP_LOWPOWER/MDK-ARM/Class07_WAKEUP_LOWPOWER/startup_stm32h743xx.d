@@ -1,0 +1,1 @@
+class07_wakeup_lowpower\startup_stm32h743xx.o: startup_stm32h743xx.s

@@ -1,0 +1,27 @@
+--cpu Cortex-M7.fp.dp
+"class07_wakeup_lowpower\startup_stm32h743xx.o"
+"class07_wakeup_lowpower\main.o"
+"class07_wakeup_lowpower\stm32h7xx_it.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_msp.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_cortex.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_tim.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_tim_ex.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_rcc.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_rcc_ex.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_flash.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_flash_ex.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_gpio.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_hsem.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_dma.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_dma_ex.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_mdma.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_pwr.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_pwr_ex.o"
+"class07_wakeup_lowpower\stm32h7xx_hal.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_i2c.o"
+"class07_wakeup_lowpower\stm32h7xx_hal_i2c_ex.o"
+"class07_wakeup_lowpower\system_stm32h7xx.o"
+--library_type=microlib --strict --scatter "Class07_WAKEUP_LOWPOWER\Class07_WAKEUP_LOWPOWER.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Class07_WAKEUP_LOWPOWER.map" -o Class07_WAKEUP_LOWPOWER\Class07_WAKEUP_LOWPOWER.axf
