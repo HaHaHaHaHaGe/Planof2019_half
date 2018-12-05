@@ -1,0 +1,146 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/simulation/modelsim
+vNCO
+Z1 !s110 1543981207
+!i10b 1
+!s100 L0<YR5Bg41BBijoED1WB<1
+IEg3>LfTjL^TD4QP7?=6Bh2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1543979107
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/NCO.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/NCO.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1543981207.000000
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/NCO.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/NCO.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module
+Z7 tCvgOpt 0
+n@n@c@o
+vNCO_tb
+R1
+!i10b 1
+!s100 Ii<6N[c;:Ob2_SPQDn[SI2
+IJSH:7bLM78gTmQEjTL>?41
+R2
+R0
+w1543979750
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/testbench/NCO_tb.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/testbench/NCO_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/testbench/NCO_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/testbench|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/testbench/NCO_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/testbench
+R7
+n@n@c@o_tb
+vPLL
+R1
+!i10b 1
+!s100 G`07[Q[hNDAXT]mIo9CDF0
+IZYPL1k=SZD>W?n8CTmP570
+R2
+R0
+w1543978774
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/PLL.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/PLL.v
+L0 39
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/PLL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/PLL.v|
+!i113 1
+R5
+R6
+R7
+n@p@l@l
+vPLL_altpll
+R1
+!i10b 1
+!s100 nX[1:SEC8GBBXc3ZO`c2J1
+IFH8hIYPJfLQ0Y2Bn]fL]F0
+R2
+R0
+w1543978811
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/db/pll_altpll.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/db/pll_altpll.v
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/db|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/db/pll_altpll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/db
+R7
+n@p@l@l_altpll
+vtlv5618a_device
+R1
+!i10b 1
+!s100 P?:=1:edTzD>^j<^eG]mc0
+IJRG0?:MkY7NXbI4AbkM@a3
+R2
+R0
+Z8 w1542993905
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/tlv5618a_device.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/tlv5618a_device.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/tlv5618a_device.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/tlv5618a_device.v|
+!i113 1
+R5
+R6
+R7
+vtlv5618a_interface
+R1
+!i10b 1
+!s100 Of=ADzG768<Q<8V32XCSo1
+IHR24`RQPANkM]:NR6Y;N:0
+R2
+R0
+R8
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/tlv5618a_interface.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/tlv5618a_interface.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/tlv5618a_interface.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/tlv5618a_interface.v|
+!i113 1
+R5
+R6
+R7

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Dec 05 12:31:03 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : NCO
+Top-level Entity Name : NCO
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 298 / 10,320 ( 3 % )
+    Total combinational functions : 289 / 10,320 ( 3 % )
+    Dedicated logic registers : 268 / 10,320 ( 3 % )
+Total registers : 268
+Total pins : 5 / 180 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 180,224 / 423,936 ( 43 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

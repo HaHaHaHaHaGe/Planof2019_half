@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "dac_sclk",
+					"strict" : false
+				},
+				{
+					"name" : "dac_din",
+					"strict" : false
+				},
+				{
+					"name" : "dac_csn",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

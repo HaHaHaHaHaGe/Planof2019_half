@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "windows64",
+		"os_name" : "Windows 10",
+		"os_version" : "10.0"
+	},
+	"error" : {
+		"executable" : "quartus",
+		"comment" : "not_applicable",
+		"error_message" : "Access Violation at 0X000000005A423E94",
+		"source_file" : "unknown",
+		"line" : "0",
+		"stack_trace" : "\t 0x5a423e93: QtGui4 + 0x63e93 (?layout@QWidget@@QEBAPEAVQLayout@@XZ + 0x3)\n\t 0x5a75a07b: QtGui4 + 0x39a07b (?menuBar@QMainWindow@@QEBAPEAVQMenuBar@@XZ + 0x1b)\n\t0x7fffcddf7d97: GCL_AFCQ + 0xa7d97 (?get_main_menu_action@AFCQ_MAIN_WINDOW@@QEAAPEAVQAction@@AEBVQString@@@Z + 0x67)\n\t0x7fffad90948d: pgm_pgmwq + 0x7948d (?pgmwq_ocpp_time_remaining@@YAXIJ@Z + 0x6d)\n\t0x7fffadb2bf97: saui_csetq + 0xbf97 (??0CSETQ_POWER_INPUT_DLG@@QEAA@PEAVQWidget@@PEAV?$vector@UCSETQ_INFILE_STRUCT@@V?$allocator@UCSETQ_INFILE_STRUCT@@@std@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@PEAUCSETQ_INFILE_STRUCT@@2@Z + 0x247)\n\t 0x5a0f95b7: QtCore4 + 0x295b7 (?start@QThread@@QEAAXW4Priority@1@@Z + 0x427)\n\t0x7fffe63e4f7e: MSVCR120 + 0x24f7e (_beginthreadex + 0x106)\n\t0x7fffe63e5125: MSVCR120 + 0x25125 (_endthreadex + 0x191)\n\t0x7ff81e0a7e93: KERNEL32 + 0x17e93 (BaseThreadInitThunk + 0x13)\n\t0x7ff81f4a7ad0: ntdll + 0x67ad0 (RtlUserThreadStart + 0x20)\n",
+		"subsystem" : "unknown"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "18.1.0",
+		"build" : "625",
+		"edition" : "Standard Edition"
+	}
+}

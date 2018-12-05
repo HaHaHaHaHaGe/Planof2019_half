@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Dec 05 12:30:57 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : NCO
+Top-level Entity Name : NCO
+Family : Cyclone IV E
+Total logic elements : 303
+    Total combinational functions : 286
+    Dedicated logic registers : 268
+Total registers : 268
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 180,224
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

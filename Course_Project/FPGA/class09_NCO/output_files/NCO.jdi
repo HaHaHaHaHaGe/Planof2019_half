@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="779daa9dcb72cf4597dd"/>
+  </project>
+  <file_info>
+    <file device="EP4CE10F17C8" path="NCO.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="nco_test:nco_test1" name="nco_test1">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME nco_test HAS_SOPCINFO 1 GENERATION_ID 1543982156"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

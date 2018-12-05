@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/simulation/modelsim
+vnco_test
+Z1 !s110 1543981207
+!i10b 1
+!s100 MZ3FTo2nOJCEAh6JfT<UA0
+IcUdh[eW6D[18Jg2ZShH?d1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1543981048
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/module/synthesis/nco_test.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/module/synthesis/nco_test.v
+L0 6
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1543981207.000000
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/module/synthesis/nco_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|nco_test|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/module/synthesis|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/module/synthesis/nco_test.v|
+!i113 1
+Z6 o-vlog01compat -work nco_test
+!s92 -vlog01compat -work nco_test +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/module/synthesis
+Z7 tCvgOpt 0
+vnco_test_nco_ii_0
+R1
+!i10b 1
+!s100 WcXU:bea:SQik99mbcdD52
+Ih]^2mRGdblRn;E3BzcCeT1
+R2
+R0
+R3
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/module/synthesis/submodules/nco_test_nco_ii_0.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/module/synthesis/submodules/nco_test_nco_ii_0.v
+L0 23
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/module/synthesis/submodules/nco_test_nco_ii_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|nco_test|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/module/synthesis/submodules|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/module/synthesis/submodules/nco_test_nco_ii_0.v|
+!i113 1
+R6
+!s92 -vlog01compat -work nco_test +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/module/synthesis/submodules
+R7

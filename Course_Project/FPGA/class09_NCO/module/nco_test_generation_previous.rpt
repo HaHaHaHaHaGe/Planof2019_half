@@ -1,0 +1,63 @@
+Info: Starting: Create simulation model
+Info: qsys-generate C:\Users\Administrator\Desktop\github_code\Planof2019_half\Course_Project\FPGA\class09_NCO\nco_test.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=C:\Users\Administrator\Desktop\github_code\Planof2019_half\Course_Project\FPGA\class09_NCO\module\simulation --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading class09_NCO/nco_test.qsys
+Progress: Reading input file
+Progress: Adding nco_ii_0 [altera_nco_ii 18.1]
+Progress: Parameterizing module nco_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nco_test: Generating nco_test "nco_test" for SIM_VERILOG
+Info: nco_ii_0: "nco_test" instantiated altera_nco_ii "nco_ii_0"
+Info: nco_test: Done "nco_test" with 2 modules, 28 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=C:\Users\Administrator\Desktop\github_code\Planof2019_half\Course_Project\FPGA\class09_NCO\module\nco_test.spd --output-directory=C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\Administrator\Desktop\github_code\Planof2019_half\Course_Project\FPGA\class09_NCO\module\nco_test.spd --output-directory=C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	1 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class09_NCO/module/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\Administrator\Desktop\github_code\Planof2019_half\Course_Project\FPGA\class09_NCO\nco_test.qsys --block-symbol-file --output-directory=C:\Users\Administrator\Desktop\github_code\Planof2019_half\Course_Project\FPGA\class09_NCO\module --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading class09_NCO/nco_test.qsys
+Progress: Reading input file
+Progress: Adding nco_ii_0 [altera_nco_ii 18.1]
+Progress: Parameterizing module nco_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\Administrator\Desktop\github_code\Planof2019_half\Course_Project\FPGA\class09_NCO\nco_test.qsys --synthesis=VERILOG --output-directory=C:\Users\Administrator\Desktop\github_code\Planof2019_half\Course_Project\FPGA\class09_NCO\module\synthesis --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading class09_NCO/nco_test.qsys
+Progress: Reading input file
+Progress: Adding nco_ii_0 [altera_nco_ii 18.1]
+Progress: Parameterizing module nco_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nco_test: Generating nco_test "nco_test" for QUARTUS_SYNTH
+Info: nco_ii_0: "nco_test" instantiated altera_nco_ii "nco_ii_0"
+Info: nco_test: Done "nco_test" with 2 modules, 17 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
