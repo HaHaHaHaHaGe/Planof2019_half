@@ -1,0 +1,145 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/simulation/modelsim
+vARP
+Z1 !s110 1544476414
+!i10b 1
+!s100 efZSWgoOVUD`7Rheg[[652
+I5Y0WVnb79fNAMbV2acCO31
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1544469863
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/ARP.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/ARP.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1544476414.000000
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/ARP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/ARP.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module
+Z7 tCvgOpt 0
+n@a@r@p
+varp_test
+R1
+!i10b 1
+!s100 31TZ7?VN<dS2^_6^BOl3:1
+I]BAT0P9GDYzSeOOQ7Z6PS1
+R2
+R0
+w1544473590
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/arp_test.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/arp_test.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/arp_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/arp_test.v|
+!i113 1
+R5
+R6
+R7
+varp_test_tb
+!s110 1544476415
+!i10b 1
+!s100 5boJT^^d^YoES;0?bTOSC2
+I<KEN7zY?o@_z;z^WXb;Cj2
+R2
+R0
+w1544460204
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench/arp_test_tb.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench/arp_test_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench/arp_test_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench/arp_test_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench
+R7
+vis_crc32_8bit
+R1
+!i10b 1
+!s100 XQ9Q8221C=j1FD5G1GgKP2
+IRo4[9SYdDU0@T1igik@KB1
+R2
+R0
+w1544449451
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/CRC32.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/CRC32.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/CRC32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/CRC32.v|
+!i113 1
+R5
+R6
+R7
+vRTL8201_MII_MAC
+R1
+!i10b 1
+!s100 P33U;>F=eM<l7FjMiZQ?D0
+Igh7?:VgDJ[`6F:2m3=U282
+R2
+R0
+w1544476256
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/RTL8201_MII_MAC.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/RTL8201_MII_MAC.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/RTL8201_MII_MAC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/RTL8201_MII_MAC.v|
+!i113 1
+R5
+R6
+R7
+n@r@t@l8201_@m@i@i_@m@a@c
+vRTL8201_RAM
+R1
+!i10b 1
+!s100 RVPT4KKJJLVEO9gG><NR80
+I^EKjn`DRjcFiZ^ZYVnJCb2
+R2
+R0
+w1544471608
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/RTL8201_RAM.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/RTL8201_RAM.v
+L0 39
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/RTL8201_RAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/RTL8201_RAM.v|
+!i113 1
+R5
+R6
+R7
+n@r@t@l8201_@r@a@m

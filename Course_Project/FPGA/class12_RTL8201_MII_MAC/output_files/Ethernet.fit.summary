@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Dec 11 05:21:23 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : Ethernet
+Top-level Entity Name : arp_test
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 290 / 10,320 ( 3 % )
+    Total combinational functions : 290 / 10,320 ( 3 % )
+    Dedicated logic registers : 118 / 10,320 ( 1 % )
+Total registers : 118
+Total pins : 9 / 180 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 16,384 / 423,936 ( 4 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

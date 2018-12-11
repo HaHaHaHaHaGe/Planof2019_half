@@ -1,0 +1,101 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Ethernet_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/RTL8201_RAM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:13:34 on Dec 11,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module" C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/RTL8201_RAM.v 
+# -- Compiling module RTL8201_RAM
+# 
+# Top level modules:
+# 	RTL8201_RAM
+# End time: 05:13:34 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/RTL8201_MII_MAC.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:13:34 on Dec 11,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module" C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/RTL8201_MII_MAC.v 
+# -- Compiling module RTL8201_MII_MAC
+# 
+# Top level modules:
+# 	RTL8201_MII_MAC
+# End time: 05:13:34 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/ARP.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:13:34 on Dec 11,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module" C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/ARP.v 
+# -- Compiling module ARP
+# 
+# Top level modules:
+# 	ARP
+# End time: 05:13:34 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/CRC32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:13:34 on Dec 11,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module" C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/CRC32.v 
+# -- Compiling module is_crc32_8bit
+# 
+# Top level modules:
+# 	is_crc32_8bit
+# End time: 05:13:34 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/arp_test.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:13:34 on Dec 11,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module" C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/module/arp_test.v 
+# -- Compiling module arp_test
+# 
+# Top level modules:
+# 	arp_test
+# End time: 05:13:34 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench/arp_test_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:13:34 on Dec 11,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench" C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench/arp_test_tb.v 
+# -- Compiling module arp_test_tb
+# 
+# Top level modules:
+# 	arp_test_tb
+# End time: 05:13:35 on Dec 11,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  arp_test_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" arp_test_tb 
+# Start time: 05:13:35 on Dec 11,2018
+# Loading work.arp_test_tb
+# Loading work.arp_test
+# Loading work.ARP
+# Loading work.RTL8201_MII_MAC
+# Loading work.RTL8201_RAM
+# Loading altera_mf_ver.altsyncram
+# Loading work.is_crc32_8bit
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: arp_test_tb.arp_test.RTL8201_MII_MAC1.RTL8201_RAM1.altsyncram_component.m_default.altsyncram_inst
+# ** Note: $stop    : C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench/arp_test_tb.v(34)
+#    Time: 100200 ns  Iteration: 0  Instance: /arp_test_tb
+# Break in Module arp_test_tb at C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench/arp_test_tb.v line 34
+# End time: 05:18:49 on Dec 11,2018, Elapsed time: 0:05:14
+# Errors: 0, Warnings: 0

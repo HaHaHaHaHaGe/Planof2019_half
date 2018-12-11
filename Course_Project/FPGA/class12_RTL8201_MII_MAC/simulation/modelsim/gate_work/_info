@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/simulation/modelsim
+varp_test
+Z1 !s110 1544469100
+!i10b 1
+!s100 i=`12g@4o9UIb@g9AN?612
+I4GT`CES5;Wh48iLIC<1C^1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1544468907
+Z4 8Ethernet_8_1200mv_85c_slow.vo
+Z5 FEthernet_8_1200mv_85c_slow.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1544469100.000000
+Z8 !s107 Ethernet_8_1200mv_85c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Ethernet_8_1200mv_85c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+varp_test_tb
+R1
+!i10b 1
+!s100 5boJT^^d^YoES;0?bTOSC2
+I<KEN7zY?o@_z;z^WXb;Cj2
+R2
+R0
+w1544460204
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench/arp_test_tb.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench/arp_test_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench/arp_test_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench/arp_test_tb.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class12_RTL8201_MII_MAC/testbench
+R12
+vhard_block
+R1
+!i10b 1
+!s100 <a5ThKBgXYV`;^[cACYlR2
+INTOH8]lYCSm7^5Mg:fB8F3
+R2
+R0
+R3
+R4
+R5
+L0 8349
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12

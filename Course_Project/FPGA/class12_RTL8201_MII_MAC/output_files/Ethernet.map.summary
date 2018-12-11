@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Dec 11 05:21:16 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : Ethernet
+Top-level Entity Name : arp_test
+Family : Cyclone IV E
+Total logic elements : 290
+    Total combinational functions : 290
+    Dedicated logic registers : 118
+Total registers : 118
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 16,384
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

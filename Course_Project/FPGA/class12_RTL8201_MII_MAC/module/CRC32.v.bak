@@ -1,0 +1,73 @@
+
+
+module CRC32_D8 
+  (
+  data, 
+  crc,
+  next_crc
+  );
+
+    input [7:0] data;
+    input [31:0] crc;
+    
+    output[31:0] next_crc ;
+
+	wire [7:0] data_tmp ;
+	wire [31:0] crc_tmp ;
+	wire [31:0] new_crc ;
+
+	assign data_tmp        = data ,
+			 crc_tmp        = crc ,
+			 next_crc = new_crc ;
+
+    assign new_crc[0] = data_tmp[6] ^ data_tmp[0] ^ crc_tmp[24] ^ crc_tmp[30];
+    assign new_crc[1] = data_tmp[7] ^ data_tmp[6] ^ data_tmp[1] ^ data_tmp[0] ^ crc_tmp[24] ^ crc_tmp[25] ^ crc_tmp[30] ^ 
+                crc_tmp[31];
+    assign new_crc[2] = data_tmp[7] ^ data_tmp[6] ^ data_tmp[2] ^ data_tmp[1] ^ data_tmp[0] ^ crc_tmp[24] ^ crc_tmp[25] ^ 
+                crc_tmp[26] ^ crc_tmp[30] ^ crc_tmp[31];
+    assign new_crc[3] = data_tmp[7] ^ data_tmp[3] ^ data_tmp[2] ^ data_tmp[1] ^ crc_tmp[25] ^ crc_tmp[26] ^ crc_tmp[27] ^ 
+                crc_tmp[31];
+    assign new_crc[4] = data_tmp[6] ^ data_tmp[4] ^ data_tmp[3] ^ data_tmp[2] ^ data_tmp[0] ^ crc_tmp[24] ^ crc_tmp[26] ^ 
+                crc_tmp[27] ^ crc_tmp[28] ^ crc_tmp[30];
+    assign new_crc[5] = data_tmp[7] ^ data_tmp[6] ^ data_tmp[5] ^ data_tmp[4] ^ data_tmp[3] ^ data_tmp[1] ^ data_tmp[0] ^ crc_tmp[24] ^ 
+                crc_tmp[25] ^ crc_tmp[27] ^ crc_tmp[28] ^ crc_tmp[29] ^ crc_tmp[30] ^ crc_tmp[31];
+    assign new_crc[6] = data_tmp[7] ^ data_tmp[6] ^ data_tmp[5] ^ data_tmp[4] ^ data_tmp[2] ^ data_tmp[1] ^ crc_tmp[25] ^ crc_tmp[26] ^ 
+                crc_tmp[28] ^ crc_tmp[29] ^ crc_tmp[30] ^ crc_tmp[31];
+    assign new_crc[7] = data_tmp[7] ^ data_tmp[5] ^ data_tmp[3] ^ data_tmp[2] ^ data_tmp[0] ^ crc_tmp[24] ^ crc_tmp[26] ^ 
+                crc_tmp[27] ^ crc_tmp[29] ^ crc_tmp[31];
+    assign new_crc[8] = data_tmp[4] ^ data_tmp[3] ^ data_tmp[1] ^ data_tmp[0] ^ crc_tmp[0] ^ crc_tmp[24] ^ crc_tmp[25] ^ 
+                crc_tmp[27] ^ crc_tmp[28];
+    assign new_crc[9] = data_tmp[5] ^ data_tmp[4] ^ data_tmp[2] ^ data_tmp[1] ^ crc_tmp[1] ^ crc_tmp[25] ^ crc_tmp[26] ^ 
+                crc_tmp[28] ^ crc_tmp[29];
+    assign new_crc[10] = data_tmp[5] ^ data_tmp[3] ^ data_tmp[2] ^ data_tmp[0] ^ crc_tmp[2] ^ crc_tmp[24] ^ crc_tmp[26] ^ 
+                 crc_tmp[27] ^ crc_tmp[29];
+    assign new_crc[11] = data_tmp[4] ^ data_tmp[3] ^ data_tmp[1] ^ data_tmp[0] ^ crc_tmp[3] ^ crc_tmp[24] ^ crc_tmp[25] ^ 
+                 crc_tmp[27] ^ crc_tmp[28];
+    assign new_crc[12] = data_tmp[6] ^ data_tmp[5] ^ data_tmp[4] ^ data_tmp[2] ^ data_tmp[1] ^ data_tmp[0] ^ crc_tmp[4] ^ crc_tmp[24] ^ 
+                 crc_tmp[25] ^ crc_tmp[26] ^ crc_tmp[28] ^ crc_tmp[29] ^ crc_tmp[30];
+    assign new_crc[13] = data_tmp[7] ^ data_tmp[6] ^ data_tmp[5] ^ data_tmp[3] ^ data_tmp[2] ^ data_tmp[1] ^ crc_tmp[5] ^ crc_tmp[25] ^ 
+                 crc_tmp[26] ^ crc_tmp[27] ^ crc_tmp[29] ^ crc_tmp[30] ^ crc_tmp[31];
+    assign new_crc[14] = data_tmp[7] ^ data_tmp[6] ^ data_tmp[4] ^ data_tmp[3] ^ data_tmp[2] ^ crc_tmp[6] ^ crc_tmp[26] ^ crc_tmp[27] ^ 
+                 crc_tmp[28] ^ crc_tmp[30] ^ crc_tmp[31];
+    assign new_crc[15] = data_tmp[7] ^ data_tmp[5] ^ data_tmp[4] ^ data_tmp[3] ^ crc_tmp[7] ^ crc_tmp[27] ^ crc_tmp[28] ^ 
+                 crc_tmp[29] ^ crc_tmp[31];
+    assign new_crc[16] = data_tmp[5] ^ data_tmp[4] ^ data_tmp[0] ^ crc_tmp[8] ^ crc_tmp[24] ^ crc_tmp[28] ^ crc_tmp[29];
+    assign new_crc[17] = data_tmp[6] ^ data_tmp[5] ^ data_tmp[1] ^ crc_tmp[9] ^ crc_tmp[25] ^ crc_tmp[29] ^ crc_tmp[30];
+    assign new_crc[18] = data_tmp[7] ^ data_tmp[6] ^ data_tmp[2] ^ crc_tmp[10] ^ crc_tmp[26] ^ crc_tmp[30] ^ crc_tmp[31];
+    assign new_crc[19] = data_tmp[7] ^ data_tmp[3] ^ crc_tmp[11] ^ crc_tmp[27] ^ crc_tmp[31];
+    assign new_crc[20] = data_tmp[4] ^ crc_tmp[12] ^ crc_tmp[28];
+    assign new_crc[21] = data_tmp[5] ^ crc_tmp[13] ^ crc_tmp[29];
+    assign new_crc[22] = data_tmp[0] ^ crc_tmp[14] ^ crc_tmp[24];
+    assign new_crc[23] = data_tmp[6] ^ data_tmp[1] ^ data_tmp[0] ^ crc_tmp[15] ^ crc_tmp[24] ^ crc_tmp[25] ^ crc_tmp[30];
+    assign new_crc[24] = data_tmp[7] ^ data_tmp[2] ^ data_tmp[1] ^ crc_tmp[16] ^ crc_tmp[25] ^ crc_tmp[26] ^ crc_tmp[31];
+    assign new_crc[25] = data_tmp[3] ^ data_tmp[2] ^ crc_tmp[17] ^ crc_tmp[26] ^ crc_tmp[27];
+    assign new_crc[26] = data_tmp[6] ^ data_tmp[4] ^ data_tmp[3] ^ data_tmp[0] ^ crc_tmp[18] ^ crc_tmp[24] ^ crc_tmp[27] ^ 
+                 crc_tmp[28] ^ crc_tmp[30];
+    assign new_crc[27] = data_tmp[7] ^ data_tmp[5] ^ data_tmp[4] ^ data_tmp[1] ^ crc_tmp[19] ^ crc_tmp[25] ^ crc_tmp[28] ^ 
+                 crc_tmp[29] ^ crc_tmp[31];
+    assign new_crc[28] = data_tmp[6] ^ data_tmp[5] ^ data_tmp[2] ^ crc_tmp[20] ^ crc_tmp[26] ^ crc_tmp[29] ^ crc_tmp[30];
+    assign new_crc[29] = data_tmp[7] ^ data_tmp[6] ^ data_tmp[3] ^ crc_tmp[21] ^ crc_tmp[27] ^ crc_tmp[30] ^ crc_tmp[31];
+    assign new_crc[30] = data_tmp[7] ^ data_tmp[4] ^ crc_tmp[22] ^ crc_tmp[28] ^ crc_tmp[31];
+    assign new_crc[31] = data_tmp[5] ^ crc_tmp[23] ^ crc_tmp[29];
+
+endmodule
