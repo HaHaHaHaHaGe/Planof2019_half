@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at IP.v(27): object "clk" differs only in case from object "CLK" in the same scope File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v Line: 27
+Info (10281): Verilog HDL Declaration information at IP.v(27): object "rst" differs only in case from object "RST" in the same scope File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v Line: 27

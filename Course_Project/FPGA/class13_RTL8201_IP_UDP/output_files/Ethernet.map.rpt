@@ -1,0 +1,887 @@
+Analysis & Synthesis report for Ethernet
+Thu Dec 13 19:28:33 2018
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |UDP_test|sendflag
+ 11. State Machine - |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|SEND_STATE
+ 12. State Machine - |UDP_test|IP:IP1|Send_State
+ 13. Registers Removed During Synthesis
+ 14. General Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|altsyncram_90c1:FIFOram
+ 17. Source assignments for RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1|altsyncram:altsyncram_component|altsyncram_obk1:auto_generated
+ 18. Parameter Settings for User Entity Instance: IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component
+ 19. Parameter Settings for User Entity Instance: RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1|altsyncram:altsyncram_component
+ 20. scfifo Parameter Settings by Entity Instance
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Port Connectivity Checks: "RTL8201_MII_MAC:RTL8201_MII_MAC1"
+ 23. Port Connectivity Checks: "IP:IP1|IP_FIFO:IP_FIFO1"
+ 24. Port Connectivity Checks: "IP:IP1"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Dec 13 19:28:33 2018           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; Ethernet                                        ;
+; Top-level Entity Name              ; UDP_test                                        ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 413                                             ;
+;     Total combinational functions  ; 347                                             ;
+;     Dedicated logic registers      ; 244                                             ;
+; Total registers                    ; 244                                             ;
+; Total pins                         ; 9                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 32,768                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; UDP_test           ; Ethernet           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.02        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
+; module/RTL8201_RAM.v             ; yes             ; User Wizard-Generated File   ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_RAM.v     ;         ;
+; module/RTL8201_MII_MAC.v         ; yes             ; User Verilog HDL File        ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_MII_MAC.v ;         ;
+; module/CRC32.v                   ; yes             ; User Verilog HDL File        ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/CRC32.v           ;         ;
+; module/IP.v                      ; yes             ; User Verilog HDL File        ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v              ;         ;
+; module/IP_FIFO.v                 ; yes             ; User Wizard-Generated File   ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP_FIFO.v         ;         ;
+; module/UDP_test.v                ; yes             ; User Verilog HDL File        ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/UDP_test.v        ;         ;
+; scfifo.tdf                       ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/scfifo.tdf                                                                   ;         ;
+; a_regfifo.inc                    ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_regfifo.inc                                                                ;         ;
+; a_dpfifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_dpfifo.inc                                                                 ;         ;
+; a_i2fifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_i2fifo.inc                                                                 ;         ;
+; a_fffifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_fffifo.inc                                                                 ;         ;
+; a_f2fifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_f2fifo.inc                                                                 ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                               ;         ;
+; db/scfifo_pl31.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/scfifo_pl31.tdf       ;         ;
+; db/a_dpfifo_0s31.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/a_dpfifo_0s31.tdf     ;         ;
+; db/altsyncram_90c1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/altsyncram_90c1.tdf   ;         ;
+; db/cmpr_vt8.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/cmpr_vt8.tdf          ;         ;
+; db/cntr_cpb.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/cntr_cpb.tdf          ;         ;
+; db/cntr_pp7.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/cntr_pp7.tdf          ;         ;
+; db/cntr_dpb.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/cntr_dpb.tdf          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                               ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                  ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                                                                   ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                                                                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                                                                 ;         ;
+; db/altsyncram_obk1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/altsyncram_obk1.tdf   ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 413       ;
+;                                             ;           ;
+; Total combinational functions               ; 347       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 193       ;
+;     -- 3 input functions                    ; 54        ;
+;     -- <=2 input functions                  ; 100       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 263       ;
+;     -- arithmetic mode                      ; 84        ;
+;                                             ;           ;
+; Total registers                             ; 244       ;
+;     -- Dedicated logic registers            ; 244       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 9         ;
+; Total memory bits                           ; 32768     ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 239       ;
+; Total fan-out                               ; 2469      ;
+; Average fan-out                             ; 3.95      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                           ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |UDP_test                                    ; 347 (84)            ; 244 (74)                  ; 32768       ; 0            ; 0       ; 0         ; 9    ; 0            ; |UDP_test                                                                                                                          ; UDP_test        ; work         ;
+;    |IP:IP1|                                  ; 116 (53)            ; 101 (52)                  ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|IP:IP1                                                                                                                   ; IP              ; work         ;
+;       |IP_FIFO:IP_FIFO1|                     ; 63 (0)              ; 49 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|IP:IP1|IP_FIFO:IP_FIFO1                                                                                                  ; IP_FIFO         ; work         ;
+;          |scfifo:scfifo_component|           ; 63 (0)              ; 49 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component                                                                          ; scfifo          ; work         ;
+;             |scfifo_pl31:auto_generated|     ; 63 (0)              ; 49 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated                                               ; scfifo_pl31     ; work         ;
+;                |a_dpfifo_0s31:dpfifo|        ; 63 (31)             ; 49 (17)                   ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo                          ; a_dpfifo_0s31   ; work         ;
+;                   |altsyncram_90c1:FIFOram|  ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|altsyncram_90c1:FIFOram  ; altsyncram_90c1 ; work         ;
+;                   |cntr_cpb:rd_ptr_msb|      ; 10 (10)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|cntr_cpb:rd_ptr_msb      ; cntr_cpb        ; work         ;
+;                   |cntr_dpb:wr_ptr|          ; 11 (11)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|cntr_dpb:wr_ptr          ; cntr_dpb        ; work         ;
+;                   |cntr_pp7:usedw_counter|   ; 11 (11)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|cntr_pp7:usedw_counter   ; cntr_pp7        ; work         ;
+;    |RTL8201_MII_MAC:RTL8201_MII_MAC1|        ; 147 (102)           ; 69 (69)                   ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1                                                                                         ; RTL8201_MII_MAC ; work         ;
+;       |RTL8201_RAM:RTL8201_RAM1|             ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1                                                                ; RTL8201_RAM     ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;             |altsyncram_obk1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1|altsyncram:altsyncram_component|altsyncram_obk1:auto_generated ; altsyncram_obk1 ; work         ;
+;       |is_crc32_8bit:is_crc32_8bit1|         ; 45 (45)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|is_crc32_8bit:is_crc32_8bit1                                                            ; is_crc32_8bit   ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                         ;
++-------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                                                                                ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|altsyncram_90c1:FIFOram|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 2048         ; 8            ; 2048         ; 8            ; 16384 ; None ;
+; RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1|altsyncram:altsyncram_component|altsyncram_obk1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 2048         ; 8            ; 2048         ; 8            ; 16384 ; None ;
++-------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                      ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------+----------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                     ; IP Include File      ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------+----------------------+
+; Altera ; FIFO         ; 18.1    ; N/A          ; N/A          ; |UDP_test|IP:IP1|IP_FIFO:IP_FIFO1                                   ; module/IP_FIFO.v     ;
+; Altera ; RAM: 2-PORT  ; 18.1    ; N/A          ; N/A          ; |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1 ; module/RTL8201_RAM.v ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------+----------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UDP_test|sendflag                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+; Name              ; sendflag.00011111 ; sendflag.00011110 ; sendflag.00011101 ; sendflag.00011100 ; sendflag.00011011 ; sendflag.00011010 ; sendflag.00011001 ; sendflag.00011000 ; sendflag.00010111 ; sendflag.00010110 ; sendflag.00010101 ; sendflag.00010100 ; sendflag.00010011 ; sendflag.00010010 ; sendflag.00010001 ; sendflag.00010000 ; sendflag.00001111 ; sendflag.00001110 ; sendflag.00001101 ; sendflag.00001100 ; sendflag.00001011 ; sendflag.00001010 ; sendflag.00001001 ; sendflag.00001000 ; sendflag.00000111 ; sendflag.00000110 ; sendflag.00000101 ; sendflag.00000100 ; sendflag.00000011 ; sendflag.00000010 ; sendflag.00000001 ; sendflag.00000000 ; sendflag.00100000 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+; sendflag.00000000 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ;
+; sendflag.00000001 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 1                 ; 0                 ;
+; sendflag.00000010 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00000011 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00000100 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00000101 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00000110 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00000111 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00001000 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00001001 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00001010 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00001011 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00001100 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00001101 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00001110 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00001111 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00010000 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00010001 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00010010 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00010011 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00010100 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00010101 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00010110 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00010111 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00011000 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00011001 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00011010 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00011011 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00011100 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00011101 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00011110 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00011111 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ;
+; sendflag.00100000 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 1                 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|SEND_STATE                                            ;
++----------------------------+----------------------------+---------------------------+----------------------------+
+; Name                       ; SEND_STATE.SEND_STATE_IDLE ; SEND_STATE.SEND_STATE_ETH ; SEND_STATE.SEND_STATE_RECV ;
++----------------------------+----------------------------+---------------------------+----------------------------+
+; SEND_STATE.SEND_STATE_IDLE ; 0                          ; 0                         ; 0                          ;
+; SEND_STATE.SEND_STATE_RECV ; 1                          ; 0                         ; 1                          ;
+; SEND_STATE.SEND_STATE_ETH  ; 1                          ; 1                         ; 0                          ;
++----------------------------+----------------------------+---------------------------+----------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UDP_test|IP:IP1|Send_State                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
+; Name               ; Send_State.0100110 ; Send_State.0100101 ; Send_State.0100100 ; Send_State.0100011 ; Send_State.0100010 ; Send_State.0100001 ; Send_State.0100000 ; Send_State.0011111 ; Send_State.0011110 ; Send_State.0011101 ; Send_State.0011100 ; Send_State.0011011 ; Send_State.0011010 ; Send_State.0011001 ; Send_State.0011000 ; Send_State.0010111 ; Send_State.0010110 ; Send_State.0010101 ; Send_State.0010100 ; Send_State.0010011 ; Send_State.0010010 ; Send_State.0010001 ; Send_State.0010000 ; Send_State.0001111 ; Send_State.0001110 ; Send_State.0001101 ; Send_State.0001100 ; Send_State.0001011 ; Send_State.0001010 ; Send_State.0001001 ; Send_State.0001000 ; Send_State.0000111 ; Send_State.0000110 ; Send_State.0000101 ; Send_State.0000100 ; Send_State.0000011 ; Send_State.0000010 ; Send_State.0000001 ; Send_State.0000000 ;
++--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
+; Send_State.0000000 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ;
+; Send_State.0000001 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 1                  ;
+; Send_State.0000010 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 1                  ;
+; Send_State.0000011 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0000100 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0000101 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0000110 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0000111 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0001000 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0001001 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0001010 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0001011 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0001100 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0001101 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0001110 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0001111 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0010000 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0010001 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0010010 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0010011 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0010100 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0010101 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0010110 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0010111 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0011000 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0011001 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0011010 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0011011 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0011100 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0011101 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0011110 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0011111 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0100000 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0100001 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0100010 ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0100011 ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0100100 ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0100101 ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; Send_State.0100110 ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
++--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; IP:IP1|dlen[0]                          ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac[36..47]                      ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac[35]                          ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac[34]                          ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac[33]                          ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac[30..32]                      ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac[28,29]                       ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac[27]                          ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac[26]                          ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac[25]                          ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac[24]                          ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac[17..23]                      ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac[9..16]                       ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac[8]                           ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac[6,7]                         ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac[0..5]                        ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[44..47]                    ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[42,43]                     ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[40,41]                     ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[39]                        ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[37,38]                     ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[34..36]                    ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[33]                        ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[31,32]                     ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[29,30]                     ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[28]                        ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[26,27]                     ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[25]                        ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[24]                        ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[23]                        ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[19..22]                    ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[18]                        ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[17]                        ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[14..16]                    ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[13]                        ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[12]                        ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[11]                        ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[10]                        ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[8,9]                       ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[7]                         ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[6]                         ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[5]                         ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|mac_2[2..4]                      ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|mac_2[0,1]                       ; Stuck at VCC due to stuck port data_in ;
+; IP:IP1|dlen[2,3,6..15]                  ; Stuck at GND due to stuck port data_in ;
+; IP:IP1|dlen[4,5]                        ; Merged with IP:IP1|dlen[1]             ;
+; sendflag~4                              ; Lost fanout                            ;
+; sendflag~5                              ; Lost fanout                            ;
+; sendflag~6                              ; Lost fanout                            ;
+; sendflag~7                              ; Lost fanout                            ;
+; sendflag~8                              ; Lost fanout                            ;
+; sendflag~10                             ; Lost fanout                            ;
+; sendflag~11                             ; Lost fanout                            ;
+; IP:IP1|Send_State~43                    ; Lost fanout                            ;
+; IP:IP1|Send_State~44                    ; Lost fanout                            ;
+; IP:IP1|Send_State~45                    ; Lost fanout                            ;
+; IP:IP1|Send_State~46                    ; Lost fanout                            ;
+; IP:IP1|Send_State~47                    ; Lost fanout                            ;
+; IP:IP1|Send_State~48                    ; Lost fanout                            ;
+; IP:IP1|Send_State~49                    ; Lost fanout                            ;
+; Total Number of Removed Registers = 125 ;                                        ;
++-----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 244   ;
+; Number of registers using Synchronous Clear  ; 52    ;
+; Number of registers using Synchronous Load   ; 5     ;
+; Number of registers using Asynchronous Clear ; 243   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 127   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|wraddress[4]   ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|CRC32_in[21]   ;
+; 33:1               ; 4 bits    ; 88 LEs        ; 32 LEs               ; 56 LEs                 ; Yes        ; |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|ETH_TX_DATA[3] ;
+; 33:1               ; 11 bits   ; 242 LEs       ; 11 LEs               ; 231 LEs                ; Yes        ; |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|rdaddress[6]   ;
+; 33:1               ; 4 bits    ; 88 LEs        ; 36 LEs               ; 52 LEs                 ; Yes        ; |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|Toggle_Send[3] ;
+; 29:1               ; 2 bits    ; 38 LEs        ; 32 LEs               ; 6 LEs                  ; Yes        ; |UDP_test|IP:IP1|SEND_DATA[4]                             ;
+; 30:1               ; 2 bits    ; 40 LEs        ; 36 LEs               ; 4 LEs                  ; Yes        ; |UDP_test|IP:IP1|SEND_DATA[0]                             ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |UDP_test|RTL8201_MII_MAC:RTL8201_MII_MAC1|Selector1      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|altsyncram_90c1:FIFOram ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                               ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1|altsyncram:altsyncram_component|altsyncram_obk1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                 ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component ;
++-------------------------+--------------+-----------------------------------------------------+
+; Parameter Name          ; Value        ; Type                                                ;
++-------------------------+--------------+-----------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON           ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS    ; OFF          ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS     ; ON           ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS  ; OFF          ; IGNORE_CASCADE                                      ;
+; lpm_width               ; 8            ; Signed Integer                                      ;
+; LPM_NUMWORDS            ; 2048         ; Signed Integer                                      ;
+; LPM_WIDTHU              ; 11           ; Signed Integer                                      ;
+; LPM_SHOWAHEAD           ; ON           ; Untyped                                             ;
+; UNDERFLOW_CHECKING      ; ON           ; Untyped                                             ;
+; OVERFLOW_CHECKING       ; ON           ; Untyped                                             ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF          ; Untyped                                             ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF          ; Untyped                                             ;
+; ALMOST_FULL_VALUE       ; 0            ; Untyped                                             ;
+; ALMOST_EMPTY_VALUE      ; 0            ; Untyped                                             ;
+; ENABLE_ECC              ; FALSE        ; Untyped                                             ;
+; USE_EAB                 ; ON           ; Untyped                                             ;
+; MAXIMIZE_SPEED          ; 5            ; Untyped                                             ;
+; DEVICE_FAMILY           ; Cyclone IV E ; Untyped                                             ;
+; OPTIMIZE_FOR_SPEED      ; 5            ; Untyped                                             ;
+; CBXI_PARAMETER          ; scfifo_pl31  ; Untyped                                             ;
++-------------------------+--------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+----------------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                       ;
++------------------------------------+----------------------+----------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                    ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                               ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                             ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                    ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                                                    ;
+; WIDTH_A                            ; 8                    ; Signed Integer                                                             ;
+; WIDTHAD_A                          ; 11                   ; Signed Integer                                                             ;
+; NUMWORDS_A                         ; 2048                 ; Signed Integer                                                             ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                                    ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                    ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                    ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                    ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                    ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                    ;
+; WIDTH_B                            ; 8                    ; Signed Integer                                                             ;
+; WIDTHAD_B                          ; 11                   ; Signed Integer                                                             ;
+; NUMWORDS_B                         ; 2048                 ; Signed Integer                                                             ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                                    ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                    ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                                    ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                    ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                    ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                    ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                    ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                    ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                    ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                    ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                             ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                                    ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                    ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                                    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                    ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                    ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                    ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                    ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                                                                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                                                                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                    ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                                    ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                                    ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                                    ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                                    ;
+; CBXI_PARAMETER                     ; altsyncram_obk1      ; Untyped                                                                    ;
++------------------------------------+----------------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; scfifo Parameter Settings by Entity Instance                                 ;
++----------------------------+-------------------------------------------------+
+; Name                       ; Value                                           ;
++----------------------------+-------------------------------------------------+
+; Number of entity instances ; 1                                               ;
+; Entity Instance            ; IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component ;
+;     -- FIFO Type           ; Single Clock                                    ;
+;     -- lpm_width           ; 8                                               ;
+;     -- LPM_NUMWORDS        ; 2048                                            ;
+;     -- LPM_SHOWAHEAD       ; ON                                              ;
+;     -- USE_EAB             ; ON                                              ;
++----------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                      ;
++-------------------------------------------+-------------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                     ;
++-------------------------------------------+-------------------------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                                         ;
+; Entity Instance                           ; RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                                                 ;
+;     -- WIDTH_A                            ; 8                                                                                         ;
+;     -- NUMWORDS_A                         ; 2048                                                                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                              ;
+;     -- WIDTH_B                            ; 8                                                                                         ;
+;     -- NUMWORDS_B                         ; 2048                                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                    ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                              ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                      ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                 ;
++-------------------------------------------+-------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "RTL8201_MII_MAC:RTL8201_MII_MAC1" ;
++-------------+-------+----------+-----------------------------+
+; Port        ; Type  ; Severity ; Details                     ;
++-------------+-------+----------+-----------------------------+
+; ETH_RX_DV   ; Input ; Info     ; Explicitly unconnected      ;
+; ETH_RX_ER   ; Input ; Info     ; Explicitly unconnected      ;
+; ETH_RX_CLK  ; Input ; Info     ; Explicitly unconnected      ;
+; ETH_RX_DATA ; Input ; Info     ; Explicitly unconnected      ;
+; ETH_CRS     ; Input ; Info     ; Explicitly unconnected      ;
++-------------+-------+----------+-----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IP:IP1|IP_FIFO:IP_FIFO1"                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; usedw ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IP:IP1"                                                                                        ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; src_mac[29..28] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_mac[16..9]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_mac[7..6]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_mac[47..36] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_mac[32..30] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_mac[23..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_mac[5..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_mac[35]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_mac[34]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_mac[33]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_mac[27]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_mac[26]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_mac[25]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_mac[24]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_mac[8]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[43..42] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[36..34] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[32..31] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[16..14] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[1..0]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[47..44] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[41..40] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[38..37] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[30..29] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[27..26] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[22..19] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[9..8]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[4..2]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[39]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[33]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[28]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[25]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[24]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[23]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[18]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[17]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[13]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[12]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[11]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[10]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[7]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_mac[6]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_mac[5]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_ip[31..30]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_ip[29..24]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_ip[18..2]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_ip[23]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_ip[22]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_ip[21]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_ip[20]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_ip[19]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_ip[1]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_ip[0]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_ip[31..30]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_ip[1..0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_ip[29..24]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_ip[18..2]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_ip[23]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_ip[22]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_ip[21]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dst_ip[20]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dst_ip[19]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; data_type[7..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data_type[3..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data_type[4]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; data_type[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; len[4..1]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; len[15..5]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; len[0]          ; Input  ; Info     ; Stuck at GND                                                                        ;
+; busy            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 9                           ;
+; cycloneiii_ff         ; 244                         ;
+;     CLR               ; 115                         ;
+;     CLR SLD           ; 1                           ;
+;     ENA CLR           ; 71                          ;
+;     ENA CLR SCLR      ; 52                          ;
+;     ENA CLR SLD       ; 4                           ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 347                         ;
+;     arith             ; 84                          ;
+;         2 data inputs ; 73                          ;
+;         3 data inputs ; 11                          ;
+;     normal            ; 263                         ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 43                          ;
+;         4 data inputs ; 193                         ;
+; cycloneiii_ram_block  ; 16                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.80                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Thu Dec 13 19:28:20 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Ethernet -c Ethernet
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file module/rtl8201_ram.v
+    Info (12023): Found entity 1: RTL8201_RAM File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_RAM.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file module/rtl8201_mii_mac.v
+    Info (12023): Found entity 1: RTL8201_MII_MAC File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_MII_MAC.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/crc32.v
+    Info (12023): Found entity 1: is_crc32_8bit File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/CRC32.v Line: 1
+Warning (10238): Verilog Module Declaration warning at IP.v(17): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "IP" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file module/ip.v
+    Info (12023): Found entity 1: IP File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/ip_fifo.v
+    Info (12023): Found entity 1: IP_FIFO File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP_FIFO.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file module/udp_test.v
+    Info (12023): Found entity 1: UDP_test File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/UDP_test.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file module/udp_test_rom.v
+    Info (12023): Found entity 1: UDP_test_rom File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/UDP_test_rom.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file testbench/udp_test_tb.v
+    Info (12023): Found entity 1: UDP_test_tb File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/testbench/UDP_test_tb.v Line: 2
+Info (12127): Elaborating entity "UDP_test" for the top level hierarchy
+Info (12128): Elaborating entity "IP" for hierarchy "IP:IP1" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/UDP_test.v Line: 43
+Warning (10036): Verilog HDL or VHDL warning at IP.v(32): object "sip" assigned a value but never read File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v Line: 32
+Warning (10036): Verilog HDL or VHDL warning at IP.v(33): object "dip" assigned a value but never read File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v Line: 33
+Info (12128): Elaborating entity "IP_FIFO" for hierarchy "IP:IP1|IP_FIFO:IP_FIFO1" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v Line: 64
+Info (12128): Elaborating entity "scfifo" for hierarchy "IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP_FIFO.v Line: 78
+Info (12130): Elaborated megafunction instantiation "IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP_FIFO.v Line: 78
+Info (12133): Instantiated megafunction "IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component" with the following parameter: File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP_FIFO.v Line: 78
+    Info (12134): Parameter "add_ram_output_register" = "OFF"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_numwords" = "2048"
+    Info (12134): Parameter "lpm_showahead" = "ON"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "8"
+    Info (12134): Parameter "lpm_widthu" = "11"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_pl31.tdf
+    Info (12023): Found entity 1: scfifo_pl31 File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/scfifo_pl31.tdf Line: 24
+Info (12128): Elaborating entity "scfifo_pl31" for hierarchy "IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/scfifo.tdf Line: 299
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_0s31.tdf
+    Info (12023): Found entity 1: a_dpfifo_0s31 File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/a_dpfifo_0s31.tdf Line: 32
+Info (12128): Elaborating entity "a_dpfifo_0s31" for hierarchy "IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/scfifo_pl31.tdf Line: 36
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_90c1.tdf
+    Info (12023): Found entity 1: altsyncram_90c1 File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/altsyncram_90c1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_90c1" for hierarchy "IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|altsyncram_90c1:FIFOram" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/a_dpfifo_0s31.tdf Line: 45
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_vt8.tdf
+    Info (12023): Found entity 1: cmpr_vt8 File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/cmpr_vt8.tdf Line: 22
+Info (12128): Elaborating entity "cmpr_vt8" for hierarchy "IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|cmpr_vt8:almost_full_comparer" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/a_dpfifo_0s31.tdf Line: 54
+Info (12128): Elaborating entity "cmpr_vt8" for hierarchy "IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|cmpr_vt8:three_comparison" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/a_dpfifo_0s31.tdf Line: 55
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_cpb.tdf
+    Info (12023): Found entity 1: cntr_cpb File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/cntr_cpb.tdf Line: 25
+Info (12128): Elaborating entity "cntr_cpb" for hierarchy "IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|cntr_cpb:rd_ptr_msb" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/a_dpfifo_0s31.tdf Line: 56
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_pp7.tdf
+    Info (12023): Found entity 1: cntr_pp7 File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/cntr_pp7.tdf Line: 25
+Info (12128): Elaborating entity "cntr_pp7" for hierarchy "IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|cntr_pp7:usedw_counter" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/a_dpfifo_0s31.tdf Line: 57
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_dpb.tdf
+    Info (12023): Found entity 1: cntr_dpb File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/cntr_dpb.tdf Line: 25
+Info (12128): Elaborating entity "cntr_dpb" for hierarchy "IP:IP1|IP_FIFO:IP_FIFO1|scfifo:scfifo_component|scfifo_pl31:auto_generated|a_dpfifo_0s31:dpfifo|cntr_dpb:wr_ptr" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/a_dpfifo_0s31.tdf Line: 58
+Info (12128): Elaborating entity "RTL8201_MII_MAC" for hierarchy "RTL8201_MII_MAC:RTL8201_MII_MAC1" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/UDP_test.v Line: 62
+Info (12128): Elaborating entity "RTL8201_RAM" for hierarchy "RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_MII_MAC.v Line: 44
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1|altsyncram:altsyncram_component" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_RAM.v Line: 90
+Info (12130): Elaborated megafunction instantiation "RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1|altsyncram:altsyncram_component" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_RAM.v Line: 90
+Info (12133): Instantiated megafunction "RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_RAM.v Line: 90
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "2048"
+    Info (12134): Parameter "numwords_b" = "2048"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "widthad_a" = "11"
+    Info (12134): Parameter "widthad_b" = "11"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_b" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_obk1.tdf
+    Info (12023): Found entity 1: altsyncram_obk1 File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/db/altsyncram_obk1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_obk1" for hierarchy "RTL8201_MII_MAC:RTL8201_MII_MAC1|RTL8201_RAM:RTL8201_RAM1|altsyncram:altsyncram_component|altsyncram_obk1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "is_crc32_8bit" for hierarchy "RTL8201_MII_MAC:RTL8201_MII_MAC1|is_crc32_8bit:is_crc32_8bit1" File: C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_MII_MAC.v Line: 58
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 14 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 451 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 426 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Thu Dec 13 19:28:33 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:24
+
+

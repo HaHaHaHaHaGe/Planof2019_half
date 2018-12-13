@@ -1,0 +1,170 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/simulation/modelsim
+vIP
+Z1 !s110 1544700372
+!i10b 1
+!s100 ja1D?>TSK30zE4ooHXWGP0
+IIJ=hHgY[2F[:SVWT<iZhL3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1544700328
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1544700372.000000
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module
+Z7 tCvgOpt 0
+n@i@p
+vIP_FIFO
+R1
+!i10b 1
+!s100 LHX1gD`I>nT5Pj`E6Pno22
+If^@JT0eaX80PKnXoC=TVD3
+R2
+R0
+w1544695982
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP_FIFO.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP_FIFO.v
+Z8 L0 39
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP_FIFO.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP_FIFO.v|
+!i113 1
+R5
+R6
+R7
+n@i@p_@f@i@f@o
+vis_crc32_8bit
+R1
+!i10b 1
+!s100 XQ9Q8221C=j1FD5G1GgKP2
+IDXF^Q;XC6>WcDCnM0l]`W3
+R2
+R0
+w1544449451
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/CRC32.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/CRC32.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/CRC32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/CRC32.v|
+!i113 1
+R5
+R6
+R7
+vRTL8201_MII_MAC
+R1
+!i10b 1
+!s100 P33U;>F=eM<l7FjMiZQ?D0
+IR^7R3bR>@KPhob;0c]_9^1
+R2
+R0
+w1544476256
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_MII_MAC.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_MII_MAC.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_MII_MAC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_MII_MAC.v|
+!i113 1
+R5
+R6
+R7
+n@r@t@l8201_@m@i@i_@m@a@c
+vRTL8201_RAM
+R1
+!i10b 1
+!s100 RVPT4KKJJLVEO9gG><NR80
+I6S`B3NSK7?eiPCAzj=M_>1
+R2
+R0
+w1544471608
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_RAM.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_RAM.v
+R8
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_RAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_RAM.v|
+!i113 1
+R5
+R6
+R7
+n@r@t@l8201_@r@a@m
+vUDP_test
+Z9 !s110 1544700373
+!i10b 1
+!s100 5o^SD<^UnRQQhgi@QVHm]3
+IIZ=dI=9;8_[ko8z`n@G3K2
+R2
+R0
+w1544700154
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/UDP_test.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/UDP_test.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/UDP_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/UDP_test.v|
+!i113 1
+R5
+R6
+R7
+n@u@d@p_test
+vUDP_test_tb
+R9
+!i10b 1
+!s100 `mBgoo0DQ=gVTKTQIE`Q^1
+IRn3cGLhi;k]So?XgC;2zU3
+R2
+R0
+w1544691243
+8C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/testbench/UDP_test_tb.v
+FC:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/testbench/UDP_test_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1544700373.000000
+!s107 C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/testbench/UDP_test_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/testbench|C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/testbench/UDP_test_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/testbench
+R7
+n@u@d@p_test_tb

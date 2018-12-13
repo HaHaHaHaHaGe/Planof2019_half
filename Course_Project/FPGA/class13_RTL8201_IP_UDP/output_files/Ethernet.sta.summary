@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -5.767
+TNS   : -467.941
+
+Type  : Slow 1200mV 85C Model Setup 'ETH_TX_CLK'
+Slack : -5.570
+TNS   : -62.973
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.336
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ETH_TX_CLK'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -1.672
+TNS   : -53.367
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : 1.195
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.201
+TNS   : -379.415
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ETH_TX_CLK'
+Slack : -3.201
+TNS   : -40.629
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -5.316
+TNS   : -422.933
+
+Type  : Slow 1200mV 0C Model Setup 'ETH_TX_CLK'
+Slack : -5.069
+TNS   : -56.972
+
+Type  : Slow 1200mV 0C Model Hold 'ETH_TX_CLK'
+Slack : 0.303
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.324
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -1.501
+TNS   : -45.473
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : 1.099
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.201
+TNS   : -379.415
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ETH_TX_CLK'
+Slack : -3.201
+TNS   : -41.322
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.822
+TNS   : -167.155
+
+Type  : Fast 1200mV 0C Model Setup 'ETH_TX_CLK'
+Slack : -1.620
+TNS   : -12.963
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.103
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ETH_TX_CLK'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : -0.883
+TNS   : -30.460
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : 1.185
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -259.330
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ETH_TX_CLK'
+Slack : -3.000
+TNS   : -29.217
+
+------------------------------------------------------------

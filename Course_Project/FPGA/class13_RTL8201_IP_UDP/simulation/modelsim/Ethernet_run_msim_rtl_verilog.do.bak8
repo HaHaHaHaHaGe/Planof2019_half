@@ -1,0 +1,22 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_RAM.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/RTL8201_MII_MAC.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/CRC32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/IP_FIFO.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/module/UDP_test.v}
+
+vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/testbench {C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class13_RTL8201_IP_UDP/testbench/UDP_test_tb.v}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  UDP_test_tb
+
+add wave *
+view structure
+view signals
+run -all
