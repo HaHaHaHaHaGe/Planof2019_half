@@ -1,0 +1,8 @@
+	component nios is
+		port (
+			clk_clk       : in  std_logic := 'X'; -- clk
+			led_export    : out std_logic;        -- export
+			reset_reset_n : in  std_logic := 'X'  -- reset_n
+		);
+	end component nios;
+

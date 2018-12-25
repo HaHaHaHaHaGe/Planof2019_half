@@ -1,0 +1,24 @@
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+#include "alt_types.h"
+
+int main()
+{ 
+  alt_u8 led = 0;
+  alt_u32 i;
+  IOWR_ALTERA_AVALON_PIO_DIRECTION(PIO_BASE,0x5);
+  /* Event loop never exits. */
+  while (1)
+  {
+	  led = 0;
+	  IOWR_ALTERA_AVALON_PIO_DATA(PIO_BASE,led);
+	  i = 500000;
+	  while(i--);
+	  led = 1;
+	  IOWR_ALTERA_AVALON_PIO_DATA(PIO_BASE,led);
+	  i = 500000;
+	  while(i--);
+  }
+
+  return 0;
+}

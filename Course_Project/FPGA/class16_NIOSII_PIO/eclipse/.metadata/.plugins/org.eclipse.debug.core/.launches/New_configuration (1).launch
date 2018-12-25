@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.altera.sbt4e.launch.hardware.Nios2HardwareLaunch">
+<stringAttribute key="bytestreamCableName" value=""/>
+<stringAttribute key="bytestreamPath" value=""/>
+<stringAttribute key="bytestreamprocessorDeviceIndex" value=""/>
+<stringAttribute key="bytestreamprocessorInstanceId" value=""/>
+<booleanAttribute key="checkSysid" value="true"/>
+<booleanAttribute key="checkTimestamp" value="true"/>
+<booleanAttribute key="connectToConsole" value="true"/>
+<booleanAttribute key="downloadElf" value="true"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=""/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.altera.debug.cdi.gdb.plugin.Nios2GdbCdiDebugger"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
+<booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN_SYMBOL" value="main"/>
+<booleanAttribute key="org.eclipse.cdt.launch.ENABLE_REGISTER_BOOKKEEPING" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.launch.ENABLE_VARIABLE_BOOKKEEPING" value="false"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="nios_pio_led"/>
+<stringAttribute key="processorCableName" value=""/>
+<stringAttribute key="processorDeviceIndex" value=""/>
+<stringAttribute key="processorInstanceId" value=""/>
+<stringAttribute key="processorPath" value=""/>
+<stringAttribute key="project" value="nios_pio_led"/>
+<stringAttribute key="quartusProjectDir" value=""/>
+<booleanAttribute key="resetProcessor" value="false"/>
+<booleanAttribute key="startProcessor" value="true"/>
+<stringAttribute key="sysidBaseAddress" value=""/>
+<stringAttribute key="sysidHash" value=""/>
+<stringAttribute key="sysidTimestamp" value=""/>
+</launchConfiguration>

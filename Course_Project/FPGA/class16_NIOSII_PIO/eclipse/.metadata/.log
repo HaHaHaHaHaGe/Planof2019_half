@@ -1,0 +1,259 @@
+!SESSION 2018-12-24 22:55:20.278 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.net 4 0 2018-12-24 22:56:28.729
+!MESSAGE WinHttp.GetProxyForUrl for pac failed with error '²»ÄÜÏÂÔشúÀí·þÎñÆ÷×Զ¯ÅäÖ' #12167.
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-12-24 22:57:35.794
+!MESSAGE Indexed 'nios_pio_led_bsp' (75 sources, 65 headers) in 1.23 sec: 1,089 declarations; 2,109 references; 91 unresolved inclusions; 6 syntax errors; 173 unresolved names (5.1%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-12-24 22:57:37.803
+!MESSAGE Indexed 'nios_pio_led' (1 sources, 0 headers) in 0.004 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2018-12-24 23:22:04.048 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-12-24 23:22:29.040
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 4 0 2018-12-24 23:22:34.337
+!MESSAGE WinHttp.GetProxyForUrl for pac failed with error '²»ÄÜÏÂÔشúÀí·þÎñÆ÷×Զ¯ÅäÖ' #12167.
+!SESSION 2018-12-24 23:27:21.926 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-12-24 23:27:27.041
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 4 0 2018-12-24 23:27:32.555
+!MESSAGE WinHttp.GetProxyForUrl for pac failed with error '²»ÄÜÏÂÔشúÀí·þÎñÆ÷×Զ¯ÅäÖ' #12167.
+!SESSION 2018-12-24 23:28:19.188 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-12-24 23:28:27.085
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 4 0 2018-12-24 23:28:32.650
+!MESSAGE WinHttp.GetProxyForUrl for pac failed with error '²»ÄÜÏÂÔشúÀí·þÎñÆ÷×Զ¯ÅäÖ' #12167.
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-12-24 23:30:19.222
+!MESSAGE Indexed 'nios_pio_led_bsp' (0 sources, 0 headers) in 0.001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-12-24 23:31:04.920
+!MESSAGE Indexed 'nios_pio_led_bsp' (75 sources, 65 headers) in 0.939 sec: 1,089 declarations; 2,109 references; 91 unresolved inclusions; 6 syntax errors; 173 unresolved names (5.1%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-12-24 23:31:06.709
+!MESSAGE Indexed 'nios_pio_led' (1 sources, 0 headers) in 0.004 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:43:26.846
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:43:26.861
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:43:29.640
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:45:35.665
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:45:36.566
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:45:36.567
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:45:39.286
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:47:25.335
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:47:26.207
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:47:26.208
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:47:28.939
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:48:20.247
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:48:21.152
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:48:21.153
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:48:23.946
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:49:04.163
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:49:05.051
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:49:05.052
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:49:07.795
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:49:38.422
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:49:39.332
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:49:39.333
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:49:42.051
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:50:39.630
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:50:40.529
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:50:40.530
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:50:43.286
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:51:45.776
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:51:46.824
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:51:46.825
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:51:49.820
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:53:27.439
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:53:28.316
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:53:28.317
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:53:31.025
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:54:10.399
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:54:11.284
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:54:11.285
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:54:14.032
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:55:07.189
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:55:08.081
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:55:08.082
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:55:10.810
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:55:43.479
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:55:44.361
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:55:44.362
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:55:47.063
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:56:31.232
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-24 23:56:32.123
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:56:32.124
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545664692]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-24 23:56:34.844
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545664692 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-25 00:44:30.337
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-25 00:44:36.149
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1545669677", expected: "1545664692".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-25 00:44:36.152
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1545669677", expected: "1545664692".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-12-25 00:44:55.401
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-25 00:44:55.402
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4020 --id=0x12345678 --timestamp=1545669677]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-12-25 00:44:58.117
+!MESSAGE Executing: [C:/intelfpga/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4020 --id=0x12345678 --timestamp=1545669677 /cygdrive/c/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO/software/nios_pio_led/nios_pio_led.elf]
