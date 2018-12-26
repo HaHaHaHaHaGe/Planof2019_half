@@ -1,0 +1,75 @@
+17:02:06 **** Incremental Build of configuration Nios II for project nios_pio_it ****
+make all 
+Info: Building ../nios_pio_it_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_pio_it_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_pio_it_bsp//HAL/inc -I../nios_pio_it_bsp/ -I../nios_pio_it_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+Info: Linking nios_pio_it.elf
+nios2-elf-g++  -T'../nios_pio_it_bsp//linker.x' -msys-crt0='../nios_pio_it_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_pio_it_bsp/  -msmallc  -Wl,-Map=nios_pio_it.map   -Os -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o nios_pio_it.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert nios_pio_it.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 305210181 --sidp 0x4020 --timestamp 1545813943 --stderr_dev none --stdin_dev none --stdout_dev none --sopc_system_name unsaved --quartus_project_dir "C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO_IT" --jdi ../..//output_files/nios_pio_it.jdi --sopcinfo C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO_IT/software/nios_pio_it_bsp/../../unsaved.sopcinfo
+Info: (nios_pio_it.elf) 1624 Bytes program size (code + initialized data).
+Info:                   2468 Bytes free for stack + heap.
+Info: Creating nios_pio_it.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_pio_it.elf >nios_pio_it.objdump
+[nios_pio_it build complete]
+17:02:12 **** Incremental Build of configuration Nios II for project nios_pio_it ****
+make all 
+Info: Building ../nios_pio_it_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_pio_it_bsp/
+[BSP build complete]
+[nios_pio_it build complete]
+17:02:34 **** Incremental Build of configuration Nios II for project nios_pio_it ****
+make all 
+Info: Building ../nios_pio_it_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_pio_it_bsp/
+[BSP build complete]
+[nios_pio_it build complete]
+17:02:59 **** Incremental Build of configuration Nios II for project nios_pio_it ****
+make all 
+Info: Building ../nios_pio_it_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_pio_it_bsp/
+[BSP build complete]
+[nios_pio_it build complete]
+17:03:46 **** Incremental Build of configuration Nios II for project nios_pio_it ****
+make all 
+Info: Building ../nios_pio_it_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_pio_it_bsp/
+[BSP build complete]
+[nios_pio_it build complete]
+17:06:40 **** Incremental Build of configuration Nios II for project nios_pio_it ****
+make all 
+Info: Building ../nios_pio_it_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_pio_it_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_pio_it_bsp//HAL/inc -I../nios_pio_it_bsp/ -I../nios_pio_it_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+Info: Linking nios_pio_it.elf
+nios2-elf-g++  -T'../nios_pio_it_bsp//linker.x' -msys-crt0='../nios_pio_it_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_pio_it_bsp/  -msmallc  -Wl,-Map=nios_pio_it.map   -Os -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o nios_pio_it.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert nios_pio_it.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 305210181 --sidp 0x4020 --timestamp 1545813943 --stderr_dev none --stdin_dev none --stdout_dev none --sopc_system_name unsaved --quartus_project_dir "C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO_IT" --jdi ../..//output_files/nios_pio_it.jdi --sopcinfo C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO_IT/software/nios_pio_it_bsp/../../unsaved.sopcinfo
+Info: (nios_pio_it.elf) 1624 Bytes program size (code + initialized data).
+Info:                   2468 Bytes free for stack + heap.
+Info: Creating nios_pio_it.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_pio_it.elf >nios_pio_it.objdump
+[nios_pio_it build complete]
+17:10:11 **** Incremental Build of configuration Nios II for project nios_pio_it ****
+make all 
+Info: Building ../nios_pio_it_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_pio_it_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_pio_it_bsp//HAL/inc -I../nios_pio_it_bsp/ -I../nios_pio_it_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+Info: Linking nios_pio_it.elf
+nios2-elf-g++  -T'../nios_pio_it_bsp//linker.x' -msys-crt0='../nios_pio_it_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_pio_it_bsp/  -msmallc  -Wl,-Map=nios_pio_it.map   -Os -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o nios_pio_it.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert nios_pio_it.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 305210181 --sidp 0x4020 --timestamp 1545813943 --stderr_dev none --stdin_dev none --stdout_dev none --sopc_system_name unsaved --quartus_project_dir "C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO_IT" --jdi ../..//output_files/nios_pio_it.jdi --sopcinfo C:/Users/Administrator/Desktop/github_code/Planof2019_half/Course_Project/FPGA/class16_NIOSII_PIO_IT/software/nios_pio_it_bsp/../../unsaved.sopcinfo
+Info: (nios_pio_it.elf) 1636 Bytes program size (code + initialized data).
+Info:                   2456 Bytes free for stack + heap.
+Info: Creating nios_pio_it.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_pio_it.elf >nios_pio_it.objdump
+[nios_pio_it build complete]
+17:11:17 **** Incremental Build of configuration Nios II for project nios_pio_it ****
+make all 
+Info: Building ../nios_pio_it_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_pio_it_bsp/
+[BSP build complete]
+[nios_pio_it build complete]

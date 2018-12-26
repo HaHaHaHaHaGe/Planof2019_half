@@ -1,0 +1,9 @@
+
+State Machine - |nios_pio_it|unsaved:unsaved1|unsaved_nios2:nios2|unsaved_nios2_cpu:cpu|unsaved_nios2_cpu_nios2_oci:the_unsaved_nios2_cpu_nios2_oci|unsaved_nios2_cpu_debug_slave_wrapper:the_unsaved_nios2_cpu_debug_slave_wrapper|unsaved_nios2_cpu_debug_slave_tck:the_unsaved_nios2_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

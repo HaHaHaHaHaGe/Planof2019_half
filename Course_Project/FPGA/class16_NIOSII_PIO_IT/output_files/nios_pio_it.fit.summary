@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Dec 26 16:47:44 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : nios_pio_it
+Top-level Entity Name : nios_pio_it
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 4,950 / 10,320 ( 48 % )
+    Total combinational functions : 4,496 / 10,320 ( 44 % )
+    Dedicated logic registers : 2,827 / 10,320 ( 27 % )
+Total registers : 2827
+Total pins : 7 / 180 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 131,968 / 423,936 ( 31 % )
+Embedded Multiplier 9-bit elements : 6 / 46 ( 13 % )
+Total PLLs : 0 / 2 ( 0 % )

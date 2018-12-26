@@ -1,0 +1,8 @@
+	component unsaved is
+		port (
+			clk_clk       : in    std_logic                    := 'X';             -- clk
+			pio_export    : inout std_logic_vector(4 downto 0) := (others => 'X'); -- export
+			reset_reset_n : in    std_logic                    := 'X'              -- reset_n
+		);
+	end component unsaved;
+
